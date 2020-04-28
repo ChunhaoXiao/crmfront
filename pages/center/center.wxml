@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="menu">
+   <menu-item wx:for="{{menus}}" wx:key="index" menuoption="{{item}}"></menu-item>
+  </view>
+</view>

@@ -1,0 +1,21 @@
+<view>
+  <view class="thread-header">
+    <text>取消</text>
+    <text>新建线索</text>
+    <text bindtap="submitData">创建</text>
+  </view>
+  <view class="form">
+    <view class="textinput-item">
+      <text-input text="线索名称" bind:getInput="getValue" defaultvalue="{{postData.name?postData.name:''}}" data-name="name"/>
+    </view>
+    <select-item text="线索来源" bindtap="showOptions" data-type="thread_from" selected_text="{{selected.thread_from.name}}"/>
+    <select-item text="线索级别" bindtap="showOptions" data-type="thread_level" selected_text="{{selected.thread_level.name}}"/>
+    <text-input text="手机" bind:getInput="getValue" data-name="mobile" defaultvalue="{{postData.mobile}}"/>
+    <text-input text="地址" bind:getInput="getValue" data-name="address" defaultvalue="{{postData.address}}"/>
+    <text-input text="潜在客户名称" bind:getInput="getValue" data-name="customer_name" defaultvalue="{{postData.customer_name}}"/>
+    <select-item text="客户行业" bindtap="showOptions" data-type="thread_industry" selected_text="{{selected.thread_industry.name}}"/>
+    <select-item text="下次联系时间" bindtap="displayCalendar" selected_text="{{postData.call_date}}"/>
+    <calendar wx:if="{{showCalendar}}"  bind:afterTapDay="afterTapDay"></calendar>
+    <text-input text="备注" bind:getInput="getValue" data-name="note" defaultvalue="{{postData.note}}"/>
+  </view>
+</view>

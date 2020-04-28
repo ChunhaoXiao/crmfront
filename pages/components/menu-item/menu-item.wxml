@@ -1,0 +1,4 @@
+<view class="container">
+  <image src="../../../icons/client.png"></image>
+  <view><navigator url="{{menuoption.url}}">{{menuoption.text}}</navigator></view>
+</view>

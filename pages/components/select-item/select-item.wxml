@@ -1,0 +1,7 @@
+<view class="container" bindtap="showOptions">
+  <view>{{ text }}</view>
+  <view>{{ selected_text }}</view>
+  <view>
+    <image src="../../../icons/right-arrow.png"></image>
+  </view>
+</view>

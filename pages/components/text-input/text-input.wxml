@@ -1,0 +1,4 @@
+<view class="input-container">
+  <view class="label-text">{{text}}</view>
+  <input class="text-input" name="{{name}}" placeholder="{{placeholder}}" value="{{defaultvalue}}" bindinput="getValue"></input>
+</view>

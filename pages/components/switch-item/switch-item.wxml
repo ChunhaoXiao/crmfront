@@ -1,0 +1,6 @@
+<view class="switch-container">
+  <view class="switch-label">{{text}}</view>
+  <view class="swith-body">
+    <switch checked="{{checkedValue}}" bindchange="getChecked" value="1"/>
+  </view>
+</view>

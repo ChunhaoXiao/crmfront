@@ -1,0 +1,3 @@
+<view class="container">
+  <view bindtap="select" data-id="{{item.id}}" class="item" wx:for="{{ datas }}" wx:key="index">{{item.name}}</view>
+</view>
