@@ -6,7 +6,9 @@
     "pages/thread/thread",
     "pages/showoptions/showoptions",
     "pages/customer/customer",
-    "pages/contact/contact"
+    "pages/contact/contact",
+    "pages/product/product",
+    "pages/business/business"
   ],
   "window":{
     "backgroundTextStyle":"light",

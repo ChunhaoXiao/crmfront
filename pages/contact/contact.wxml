@@ -1,12 +1,17 @@
 <view>
-  <text-input text="姓名" bind:getInput="getValue"  name="name"/>
-  <text-input text="备注" bind:getInput="getValue"  name="note"/>
-  <select-item text="客户名称"  type="customer" name="customer" selected="{{selected}}"/>
-  <text-input text="手机" bind:getInput="getValue"  name="mobile"/>
-  <text-input text="电话" bind:getInput="getValue"  name="phone"/>
-  <text-input text="邮箱" bind:getInput="getValue"  name="email"/>
-  <text-input text="职务" bind:getInput="getValue"  name="duties"/>
+  <view class="header-container">
+    <view>取消</view>
+    <view>添加联系人</view>
+    <view bindtap="sendData">创建</view>
+  </view>
+  <text-input text="姓名" bind:getInput="getValue"  name="name" defaultvalue="{{postData.name}}"/>
+  <text-input text="备注" bind:getInput="getValue"  name="note" defaultvalue="{{postData.note}}" />
+  <select-item text="客户名称"  type="customer" name="customer_id" selected="{{selected}}"/>
+  <text-input text="手机" bind:getInput="getValue"  name="mobile" defaultvalue="{{postData.mobile}}"/>
+  <text-input text="电话" bind:getInput="getValue"  name="phone" defaultvalue="{{postData.phone}}"/>
+  <text-input text="邮箱" bind:getInput="getValue"  name="email" defaultvalue="{{postData.email}}"/>
+  <text-input text="职务" bind:getInput="getValue"  name="duties" defaultvalue="{{postData.duties}}"/>
   <switch-item text="是否是关键决策人" bind:getChecked="getValue" name="is_key_person"/>
-  <text-input text="地址" bind:getInput="getValue"  name="address"/>
-  <select-item text="下次联系时间" bindtap="displayCalendar" selected_text="{{postData.call_date}}"/>
+  <text-input text="地址" bind:getInput="getValue"  name="address" defaultvalue="{{postData.address}}"/>
+  <calendar-select text="下次联系时间" binddateset="getDate" selected_date="{{postData.next_contact_date}}"/>
 </view>

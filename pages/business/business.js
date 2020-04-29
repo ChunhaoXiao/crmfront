@@ -1,21 +1,18 @@
-// pages/center/center.js
-const menus = require('../../datas/menus');
+// pages/business/business.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    menus:[]
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      menus:menus.menus
-    })
+
   },
 
   /**
@@ -65,21 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  img() {
-    wx.chooseImage({
-      complete: (res) => {
-        const f = res.tempFilePaths[0]
-        wx.uploadFile({
-          filePath: f,
-          name: 'img',
-          url: 'https://service-q8ss7dre-1256330218.gz.apigw.tencentcs.com/release/aaa',
-          success:res => {
-            console.log(res);
-          }
-        })
-        
-      },
-    })
   }
 })

@@ -1,0 +1,4 @@
+<view class="area-container">
+  <view class="label-text">{{text}}</view>
+  <textarea class="area-input" name="{{name}}" value="{{defaultvalue}}" bindinput="getValue"/>
+</view>

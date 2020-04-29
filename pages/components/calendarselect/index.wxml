@@ -1,0 +1,10 @@
+<view>
+  <view class="container" bindtap="showCalendar">
+  <view>{{ text }}</view>
+  <view>{{ selected_date }}</view>
+  <view>
+    <image src="../../../icons/right-arrow.png"></image>
+  </view>
+  </view>
+  <calendar wx:if="{{display}}" bind:afterTapDay="afterTapDay"/>
+</view>

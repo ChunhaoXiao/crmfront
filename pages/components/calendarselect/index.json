@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "select-item":"../../components/select-item/select-item",
+    "calendar":"../../components/calendar/index"
+  }
+}

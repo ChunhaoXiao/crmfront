@@ -1,0 +1,12 @@
+<view>
+    <view class="header-container">
+      <text>取消</text>
+      <text>创建产品</text>
+      <text bindtap="sendData">创建</text>
+    </view>
+  <text-input text="商品名称" name="name" bind:getInput="getValue" defaultvalue="{{postData.name}}"/>
+  <text-input text="价格" name="price" bind:getInput="getValue" defaultvalue="{{postData.price}}"/>
+  <switch-item text="是否上架" bind:getChecked="getValue" name="is_on_sale"/>
+  <area-item text="商品描述" name="description" bindgetInput="getValue" defaultvalue="{{postData.description}}"/>
+  <chooseimg bindsetpicture="getPictures" picturelist="{{picturelist}}" />
+</view>

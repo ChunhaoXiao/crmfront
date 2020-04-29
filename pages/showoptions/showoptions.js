@@ -78,8 +78,6 @@ Page({
     const id = e.currentTarget.dataset.id
     let pages  = getCurrentPages();
     const prevPage = pages[pages.length - 2];
-
-
     let key = "postData."+this.data.name
     const itemData = this.data.datas.find(item => item.id == id)  
     let selected_key = "selected."+this.data.name; 

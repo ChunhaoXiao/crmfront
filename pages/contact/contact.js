@@ -1,4 +1,6 @@
 // pages/contact/contact.js
+const app = getApp();
+const api = require('../../utils/request')
 Page({
 
   /**
@@ -75,12 +77,39 @@ Page({
     // })
   },
 
-  getValue(e) { 
+  displayCalendar() {
+    this.setData({
+      showCalendar:!this.data.showCalendar
+    })
+  },
+
+  getValue(e) {
     let exists = this.data.postData;
     let datas = {...exists, ...e.detail}
-    console.log(datas)
+    console.log(datas);
     this.setData({
       postData:datas
     });
+  },
+  getDate(e) {
+    console.log(e.detail)
+    this.setData({
+      "postData.next_contact_date":e.detail
+    })
+  },
+  sendData() {
+    api.request({
+      method:'POST',
+      data:this.data.postData,
+      success: res => {
+        wx.showToast({
+          title: '操作成功',
+        })
+        this.setData({
+          postData:{},
+          selected:{}
+        })
+      }
+    }, 'contact')
   }
 })

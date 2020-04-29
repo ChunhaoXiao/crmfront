@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10rpx;
+}
+.body {
+  width: 100rpx;
+  height: 100rpx;
+  background-color: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.body image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.thumb {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx;
+}

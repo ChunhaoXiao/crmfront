@@ -28,26 +28,27 @@ Component({
   data: {
     datas:[],
   },
-  pageLifetimes:{
-    show() {
-      console.log('selectedvaue=', this.data.selected);
-      
-      //const key = this.data.name;
-      // if(key in this.data.selected) {
-      //   this.setData({
-      //     selected_text:this.data.selected[key]
-      //   })
-      // }
-    }
-  },
+  // pageLifetimes:{
+  //   show() {
+  //     console.log('selectedvaue=', this.data.selected);
+  //     const key = this.data.name;
+  //     if(this.data.type && key in this.data.selected) {
+  //       this.setData({
+  //         selected:this.data.selected
+  //       })
+  //     }
+  //   }
+  // },
   /**
    * 组件的方法列表
    */
   methods: {
     showOptions: function(e) {
-      wx.navigateTo({
-        url: '/pages/showoptions/showoptions?type='+this.data.type+'&name='+this.data.name,
-      })
+      if(this.data.type) {
+        wx.navigateTo({
+          url: '/pages/showoptions/showoptions?type='+this.data.type+'&name='+this.data.name,
+        })
+      }
     }
   }
 })

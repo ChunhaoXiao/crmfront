@@ -1,21 +1,21 @@
-// pages/center/center.js
-const menus = require('../../datas/menus');
+// pages/product/product.js
+const app = getApp();
+const api = require('../../utils/request')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    menus:[]
+    pictures:[],
+    postData:{},
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      menus:menus.menus
-    })
+
   },
 
   /**
@@ -66,20 +66,40 @@ Page({
   onShareAppMessage: function () {
 
   },
-  img() {
-    wx.chooseImage({
-      complete: (res) => {
-        const f = res.tempFilePaths[0]
-        wx.uploadFile({
-          filePath: f,
-          name: 'img',
-          url: 'https://service-q8ss7dre-1256330218.gz.apigw.tencentcs.com/release/aaa',
-          success:res => {
-            console.log(res);
-          }
+
+  getValue(e) {
+    let exists = this.data.postData;
+    let datas = {...exists, ...e.detail}
+    console.log(datas);
+    this.setData({
+      postData:datas
+    });
+  },
+  getPictures(e) {
+    let pictures = this.data.pictures;
+    if(e.detail) {
+      pictures.push(e.detail)
+      this.setData({
+        "postData.pictures":pictures
+      })
+    }
+  },
+
+  sendData() {
+    console.log(this.data.postData)
+    api.request({
+      method:'POST',
+      data:this.data.postData,
+      success: res => {
+        wx.showToast({
+          title: '操作成功',
         })
-        
-      },
-    })
+        this.setData({
+          postData:{},
+          pictures:[],
+          picturelist:[],
+        })
+      }
+    }, 'product')
   }
 })

@@ -1,0 +1,9 @@
+.area-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx;
+}
+
+.area-input {
+  height: 150rpx;
+}

@@ -1,0 +1,5 @@
+<view class="container">
+  <view>{{left_text}}</view>
+  <view>{{center_text}}</view>
+  <view bindtap="sendData">{{right_text}}</view>
+</view>

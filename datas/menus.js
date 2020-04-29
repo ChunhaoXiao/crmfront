@@ -13,7 +13,7 @@ module.exports.menus = [
   },
   {
     text:"商机",
-    url:" "
+    url:"/pages/business/business"
   },
   {
     text:"合同",
@@ -21,7 +21,7 @@ module.exports.menus = [
   },
   {
     text:"产品",
-    url:" "
+    url:"/pages/product/product"
   },
   {
     text:"回款",

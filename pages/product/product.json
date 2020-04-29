@@ -4,6 +4,8 @@
     "text-input":"../components/text-input/text-input",
     "switch-item":"../components/switch-item/switch-item",
     "calendar-select" : "../components/calendarselect/index",
-    "header-item":"../components/header/index"
+    "header-item":"../components/header/index",
+    "area-item" : "../components/textarea-item/index",
+    "chooseimg" : "../components/chooseimg/index"
   }
 }
