@@ -16,6 +16,8 @@ Page({
     wx.request({
       url: 'http://crm.test/api/options/'+options.type,
       success:res => {
+        console.log(res);
+        
         this.setData({
           datas:res.data,
           option:options.type,
@@ -86,6 +88,8 @@ Page({
       [selected_key]:itemData.name,
       [key] : itemData.id
     })
+    console.log(this.data.datas);
+    
     wx.navigateBack({
     });
   }

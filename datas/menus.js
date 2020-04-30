@@ -17,7 +17,7 @@ module.exports.menus = [
   },
   {
     text:"合同",
-    url:" "
+    url:"/pages/contracts/contracts"
   },
   {
     text:"产品",

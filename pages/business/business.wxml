@@ -1,23 +1,27 @@
-  <view class="container">
+  <view class="container" wx-if="{{ showform }}">
     <view class="box">
-      
     <view>
-    <view class="header-container">
-      <view>取消</view>
-      <view>添加商机</view>
-      <view bindtap="sendData">创建</view>
+      <view class="header-container">
+        <view>取消</view>
+        <view>添加商机</view>
+        <view bindtap="sendData">创建</view>
+      </view>
+      <text-input text="商机名称" name="name" bindgetInput="getValue" defaultvalue="{{postData.name}}"/>
+      <select-item text="客户名称" name="customer_id" type="customer" selected="{{selected}}"/>
+      <calendar-select text="预计成交日期" binddateset="getDate" name="expected_deal_date" selected_date="{{postData.expected_deal_date}}"/>
+      <select-item text="商机等级" name="level_id" type="business_level" selected="{{selected}}"/>
+      <area-item text="备注" name="note" bindgetInput="getValue" defaultvalue="{{postData.note}}"/>
+      <business-product wx:for="{{products}}" product="{{ item }}" wx:key="id" bindremoved="productRemoved" selected="{{[]}}"/>
     </view>
-      <text-input text="商机名称" name="name"/>
-      <select-item text="客户名称" name="customer_id" type="customer"/>
-      <calendar-select text="预计成交日期" binddateset="getDate" selected_date="{{postData.next_contact_date}}"/>
-      <select-item text="商机等级" name="business_level" type="thread_level"/>
-      <area-item text="备注" name="note"/>
-    </view>
-    
     <view class="select-product">
-      <view>产品数</view>
-      <view>总金额</view>
-      <view>添加产品</view>
+      <view>产品数:{{products.length}}</view>
+      <view>总金额:{{ total_price }}</view>
+      <view bindtap="chooseproduct">添加产品</view>
     </view>
     </view>
+  </view>
+
+  <!---列表-->
+  <view wx-if="{{!showform}}" class="container">
+    <product-item wx:for="{{datas}}" wx:key="index"  selected="{{products}}"  product="{{item}}" bind:productselected="productselected"/>
   </view>

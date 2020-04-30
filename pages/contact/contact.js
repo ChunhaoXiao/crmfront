@@ -1,6 +1,7 @@
 // pages/contact/contact.js
 const app = getApp();
 const api = require('../../utils/request')
+const util = require('../../utils/util')
 Page({
 
   /**

@@ -1,0 +1,15 @@
+<view>
+  <text-input text="合同编号" name="number" bind:getInput="util"/>
+  <text-input text="合同名称" name="name"/>
+  <select-item text="客户名称"  type="customer" name="customer_id" selected="{{selected}}"/>
+  <select-item text="商机名称"  type="customer" name="business_id" selected="{{selected}}"/>
+  <text-input text="合同金额" name="total_amount"/>
+  <calendar-select text="回款时间" binddateset="getDate" selected_date="{{postData.next_contact_date}}"/>
+  <calendar-select text="合同开始时间" binddateset="getDate" selected_date="{{postData.next_contact_date}}"/>
+  <calendar-select text="合同结束时间" binddateset="getDate" selected_date="{{postData.next_contact_date}}"/>
+  <select-item text="客户签约人"  type="customer" name="business_id" selected="{{selected}}"/>
+  <select-item text="公司签约人"  type="customer" name="business_id" selected="{{selected}}"/>
+  <view>合同存档</view>
+  <chooseimg bindsetpicture="getPictures" picturelist="{{picturelist}}" />
+</view>
+

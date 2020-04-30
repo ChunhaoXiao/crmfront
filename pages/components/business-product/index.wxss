@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rpx;
+  padding: 10rpx;
+}
+.cover {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.remove {
+  width: 50rpx;
+  height: 50rpx;
+}

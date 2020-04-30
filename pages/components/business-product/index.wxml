@@ -1,0 +1,5 @@
+<view class="container">
+  <image src="{{product.cover}}" class="cover"></image>
+  <view>{{product.name}}</view>
+  <image src="../../../icons/remove.png" class="remove" bindtap="remove"></image>
+</view>

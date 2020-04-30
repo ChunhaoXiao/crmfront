@@ -14,6 +14,20 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
+const getInputValue = (e) => {
+  let exists = this.data.postData;
+  console.log(e.detail);
+  let datas = {...exists, ...e.detail}  
+  this.setData({
+    postData:datas
+  });
+}
+
+const getDateValue = (e) => {
+
+}
+
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  getInputValue:getInputValue,
 }
