@@ -61,6 +61,13 @@
 					"id": -1,
 					"name": "pages/business/business",
 					"pathName": "pages/business/business",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/contracts/contracts",
+					"pathName": "pages/contracts/contracts",
 					"scene": null
 				}
 			]

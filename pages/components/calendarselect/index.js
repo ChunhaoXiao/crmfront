@@ -11,6 +11,10 @@ Component({
     selected_date:{
       type:String,
       default:''
+    },
+    name: {
+      type:String,
+      default:''
     }
   },
 
@@ -36,7 +40,7 @@ Component({
         display:false,
         //selected_date: dateStr
       })
-      this.triggerEvent('dateset', dateStr);
+      this.triggerEvent('dateset', {[this.data.name]: dateStr});
     },  
   }
 })

@@ -1,6 +1,6 @@
 const app = getApp();
 const api = require('../../utils/request')
-const {util} = require('../../utils/util')
+//const {util} = require('../../utils/util')
 
 Page({
 
@@ -15,7 +15,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    util.getInputValue
   },
 
   /**
@@ -65,5 +64,19 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  getValue(e) {
+    let exists = this.data.postData;
+    let datas = {...exists, ...e.detail}
+    console.log(datas);
+    this.setData({
+      postData:datas
+    });
+  },
+  getDate(e) {
+    console.log(e.detail)
+    this.setData({
+      "postData.":e.detail
+    })
   }
 })
