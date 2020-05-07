@@ -3,8 +3,9 @@
   <view class="body" bindtap="chooseimg">
     <image src="../../../icons/add.png"></image>
   </view>
+  
   <view wx:for="{{picturelist}}" wx:key="index">
       <image class="thumb" src="{{item}}"></image>
-    </view>
+  </view>
 </view>
 

@@ -13,5 +13,5 @@
   <text-input text="职务" bind:getInput="getValue"  name="duties" defaultvalue="{{postData.duties}}"/>
   <switch-item text="是否是关键决策人" bind:getChecked="getValue" name="is_key_person"/>
   <text-input text="地址" bind:getInput="getValue"  name="address" defaultvalue="{{postData.address}}"/>
-  <calendar-select text="下次联系时间" binddateset="getDate" selected_date="{{postData.next_contact_date}}"/>
+  <calendar-select text="下次联系时间" binddateset="getValue" name="next_contact_date" selected_date="{{postData.next_contact_date}}"/>
 </view>

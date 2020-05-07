@@ -1,4 +1,5 @@
 // pages/thread/thread.js
+const api =require('../../utils/request')
 Page({
 
   /**
@@ -77,58 +78,72 @@ Page({
     })
   },
 
-  afterTapDay(e) {
-    const dateStr = e.detail.year+'-'+e.detail.month+'-'+e.detail.day
-    this.setData({
-      "postData.call_date":dateStr,
-      showCalendar:false
-    })
-  },
+  // afterTapDay(e) {
+  //   const dateStr = e.detail.year+'-'+e.detail.month+'-'+e.detail.day
+  //   this.setData({
+  //     "postData.call_date":dateStr,
+  //     showCalendar:false
+  //   })
+  // },
 
-  displayCalendar() {
-    this.setData({
-      showCalendar:!this.data.showCalendar
-    })
-  },
+  // displayCalendar() {
+  //   this.setData({
+  //     showCalendar:!this.data.showCalendar
+  //   })
+  // },
 
   getValue(e) {
-    const name = e.currentTarget.dataset.name;
-    const key = "postData."+name;
+    let exists = this.data.postData;
+    let datas = {...exists, ...e.detail}
+    console.log(datas);
     this.setData({
-     [key]:e.detail
-    })
+      postData:datas
+    });
   },
   submitData() {
-    //console.log(this.data.postData)
-    wx.request({
-      url: 'http://crm.test/api/thread',
-      header:{
-        "Accept":"application/json"
-      },
-      data:this.data.postData,
+    api.request({
       method:'POST',
+      data:this.data.postData,
       success:res => {
-        if(res.statusCode == 422) {
-          const error = Object.values(res.data.errors)[0][0];
-          wx.showToast({
-            title: error,
-            icon:"none"
-          })
-          return 
-        }
         wx.showToast({
-          title: '添加成功',
+          title: '操作成功',
         })
         this.setData({
           postData:{},
           selected:{}
         })
-
-      },
-      fail:data => {
-
       }
+    }, 'thread')
+    //console.log(this.data.postData)
+    // wx.request({
+    //   url: 'http://crm.test/api/thread',
+    //   header:{
+    //     "Accept":"application/json"
+    //   },
+    //   data:this.data.postData,
+    //   method:'POST',
+    //   success:res => {
+    //     if(res.statusCode == 422) {
+    //       const error = Object.values(res.data.errors)[0][0];
+    //       wx.showToast({
+    //         title: error,
+    //         icon:"none"
+    //       })
+    //       return 
+    //     }
+    //     wx.showToast({
+    //       title: '添加成功',
+    //     })
+    //     this.setData({
+    //       postData:{},
+    //       selected:{}
+    //     })
 
-    })
+    //   },
+    //   fail:data => {
+
+    //   }
+
+    // })
   }
 })

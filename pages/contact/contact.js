@@ -16,7 +16,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    const name = options.name;
+    const customer_id = options.id;
+    this.setData({
+      "postData.customer_id": customer_id,
+      "selected.customer_id":name
+    })
   },
 
   /**

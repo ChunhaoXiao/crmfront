@@ -1,4 +1,5 @@
 // pages/showoptions/showoptions.js
+const api = require('../../utils/request')
 Page({
 
   /**
@@ -12,19 +13,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const name = options.name? options.name : options.type;
-    wx.request({
-      url: 'http://crm.test/api/options/'+options.type,
+    const type =  options.type;
+    const name = options.name;
+    api.request({
+      method:'GET',
       success:res => {
-        console.log(res);
-        
+        console.log(res.data.data);
         this.setData({
-          datas:res.data,
+          datas:res.data.data,
           option:options.type,
           name:name
         })
       }
-    })
+    }, 'options/'+type)
   },
 
   /**
@@ -83,7 +84,9 @@ Page({
     let key = "postData."+this.data.name
     const itemData = this.data.datas.find(item => item.id == id)  
     let selected_key = "selected."+this.data.name; 
-
+    //console.log('itemData:',itemData);
+    //console.log(selected_key);
+    
     prevPage.setData({
       [selected_key]:itemData.name,
       [key] : itemData.id

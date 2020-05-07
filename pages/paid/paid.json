@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "select-item":"../components/select-item/select-item",
+    "text-input":"../components/text-input/text-input",
+    "switch-item":"../components/switch-item/switch-item",
+    "calendar-select" : "../components/calendarselect/index",
+    "header-item":"../components/header/index"
+  }
+}

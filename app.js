@@ -5,10 +5,20 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
-
     // 登录
     wx.login({
       success: res => {
+        wx.request({
+          url: this.globalData.apiUrl+'authuser',
+          method:'POST',
+          data:{code:res.code},
+          success:res => {
+            console.log('token is',res.data.token);
+            wx.setStorageSync('token', res.data.token)
+          }
+        })
+        //console.log('code is：',res.code);
+        
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
@@ -43,5 +53,9 @@ App({
       url: url
       
     })
+  },
+
+  login() {
+
   }
 })

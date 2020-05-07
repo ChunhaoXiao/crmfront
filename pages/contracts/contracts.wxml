@@ -1,14 +1,20 @@
 <view>
-  <text-input text="合同编号" name="number" bind:getInput="getValue"/>
-  <text-input text="合同名称" name="name" bind:getInput="getValue"/>
+ <view class="header-container">
+    <view>取消</view>
+    <view>添加合同</view>
+    <view bindtap="sendData">创建</view>
+  </view>
+
+  <text-input text="合同编号" name="number" bind:getInput="getValue" defaultvalue="{{postData.number}}"/>
+  <text-input text="合同名称" name="name" bind:getInput="getValue"  defaultvalue="{{postData.name}}"/>
   <select-item text="客户名称"  type="customer" name="customer_id" selected="{{selected}}"/>
-  <select-item text="商机名称"  type="customer" name="business_id" selected="{{selected}}"/>
-  <text-input text="合同金额" name="total_amount" bind:getInput="getValue"/>
-  <calendar-select text="回款时间" binddateset="getDate" name="paying_date" selected_date="{{postData.paying_date}}"/>
-  <calendar-select text="合同开始时间" binddateset="getDate" name="start_date" selected_date="{{postData.start_date}}"/>
-  <calendar-select text="合同结束时间" binddateset="getDate" name="end_date" selected_date="{{postData.end_date}}"/>
-  <text-input text="客户签约人"   name="customer_name" bind:getInput="getValue"/>
-  <text-input text="公司签约人"   name="company_name"  bind:getInput="getValue"/>
+  <select-item text="商机名称"  type="business" name="business_id" selected="{{selected}}"/>
+  <text-input text="合同金额" name="total_amount" bind:getInput="getValue"  defaultvalue="{{postData.total_amount}}"/>
+  <calendar-select text="回款时间" binddateset="getValue" name="pay_date" selected_date="{{postData.pay_date}}"/>
+  <calendar-select text="合同开始时间" binddateset="getValue" name="start_date" selected_date="{{postData.start_date}}"/>
+  <calendar-select text="合同结束时间" binddateset="getValue" name="end_date" selected_date="{{postData.end_date}}"/>
+  <text-input text="客户签约人"   name="customer_sign_name" bind:getInput="getValue"  defaultvalue="{{postData.customer_sign_name}}"/>
+  <text-input text="公司签约人"   name="company_sign_name"  bind:getInput="getValue" defaultvalue="{{postData.company_sign_name}}"/>
   <view>合同存档</view>
   <chooseimg bindsetpicture="getPictures" picturelist="{{picturelist}}" />
 </view>

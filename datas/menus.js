@@ -25,7 +25,7 @@ module.exports.menus = [
   },
   {
     text:"回款",
-    url:" "
+    url:"/pages/paid/paid"
   },
   {
     text:"日程",

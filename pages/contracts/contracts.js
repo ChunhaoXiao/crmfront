@@ -9,6 +9,7 @@ Page({
    */
   data: {
     postData:{},
+    pictures:[],
   },
 
   /**
@@ -73,10 +74,29 @@ Page({
       postData:datas
     });
   },
-  getDate(e) {
-    console.log(e.detail)
-    this.setData({
-      "postData.":e.detail
-    })
+  getPictures(e) {
+    let pictures = this.data.pictures;
+    if(e.detail) {
+      pictures.push(e.detail)
+      this.setData({
+        "postData.archive":pictures
+      })
+    }
+  },
+  sendData() {
+    console.log(this.data.postData)
+    api.request({
+      method:'POST',
+      data:this.data.postData,
+      success: res => {
+        wx.showToast({
+          title: '操作成功',
+        })
+        this.setData({
+          postData:{},
+          selected:{}
+        })
+      }
+    }, 'contract')
   }
 })

@@ -1,4 +1,5 @@
 // pages/components/chooseimg/index.js
+const app = getApp();
 Component({
   /**
    * 组件的属性列表
@@ -24,7 +25,7 @@ Component({
     chooseimg() {
       wx.chooseImage({
         complete: (res) => {
-          console.log(res.tempFilePaths);
+          //console.log(res.tempFilePaths);
           this.uploadImg(res.tempFilePaths);
         }
       })
@@ -32,7 +33,7 @@ Component({
 
     uploadImg(piclist) {
 
-      if(piclist.length < 1) {
+      if(!piclist || piclist.length < 1) {
         return ;
       }
       let f = piclist.shift();
@@ -40,7 +41,11 @@ Component({
       wx.uploadFile({
         filePath: f,
         name: 'picture',
-        url: 'http://crm.test/api/upload',
+        url: app.globalData.apiUrl+'upload',
+        header:{
+          "Authorization" : "Bearer "+wx.getStorageSync('token'),
+          "Accept" : "application/json"
+        },
         success:res => {
           let pictureObj = JSON.parse(res.data);
           this.triggerEvent('setpicture', pictureObj.savepath);
@@ -50,6 +55,9 @@ Component({
             picturelist:picturelist
           })
           this.uploadImg(piclist);
+        },
+        fail:res => {
+          console.log(res)
         }
       })
     }

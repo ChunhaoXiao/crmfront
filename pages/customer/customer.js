@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    postData:{}
+    postData:{},
+    selected:{}
   },
 
   /**
@@ -78,19 +79,28 @@ Page({
   },
 
   getValue(e) {
-    const name = e.currentTarget.dataset.name;
-    const key = "postData."+name;
+    let exists = this.data.postData;
+    let datas = {...exists, ...e.detail}
+    console.log(datas);
     this.setData({
-     [key]:e.detail
-    })
+      postData:datas
+    });
   },
   sendData(){
     api.request({
       method:'POST',
       data:this.data.postData,
       success: res => {
+        console.log(res.data)
         wx.showToast({
           title: '操作成功',
+        })
+        this.setData({
+          postData:{},
+          selected:{}
+        })
+        wx.navigateTo({
+          url: '/pages/contact/contact?id='+res.data.id+'&name='+res.data.name,
         })
       }
     }, 'customer')

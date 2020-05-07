@@ -8,6 +8,7 @@ const wxRequest = function (params, url) {
   if(params.method == 'POST') {
     header.Accept = 'application/json'
   }
+  header.Authorization = 'Bearer '+wx.getStorageSync('token');
   wx.request({
     url: 'http://crm.test/api/'+url,
     method: params.method || 'GET',

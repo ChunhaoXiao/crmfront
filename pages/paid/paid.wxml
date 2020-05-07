@@ -1,0 +1,5 @@
+<view>
+  <text-input text="回款编号" name="pay_number"/>
+
+  <select-item text="合同编号" />
+</view>

@@ -9,7 +9,8 @@
     "pages/contact/contact",
     "pages/product/product",
     "pages/business/business",
-    "pages/contracts/contracts"
+    "pages/contracts/contracts",
+    "pages/paid/paid"
   ],
   "window":{
     "backgroundTextStyle":"light",

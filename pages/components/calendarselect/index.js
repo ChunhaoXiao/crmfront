@@ -36,6 +36,10 @@ Component({
     },
     afterTapDay(e) {
       const dateStr = e.detail.year+'-'+e.detail.month+'-'+e.detail.day
+      console.log('asdsadsadsad');
+      
+      console.log('selected date',dateStr);
+      
       this.setData({
         display:false,
         //selected_date: dateStr
