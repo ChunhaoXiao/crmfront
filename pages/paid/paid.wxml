@@ -1,5 +1,15 @@
 <view>
-  <text-input text="回款编号" name="pay_number"/>
-
-  <select-item text="合同编号" />
+  <view class="header-container">
+      <view>取消</view>
+      <view>添加回款</view>
+      <view bindtap="sendData">创建</view>
+    </view>
+  <text-input text="回款编号" name="pay_number" bindgetInput="getValue" defaultvalue="{{postData.pay_number}}"/>
+  <select-item text="合同编号" name="contract_id" type="contracts" selected="{{selected}}"/>
+  <select-item text="选择客户" name="customer_id" type="customers" selected="{{selected}}"/>
+  <select-item text="期数" name="" selected="{{selected}}"/>
+  <calendar-select text="回款日期" name="pay_date" binddateset="getValue" selected_date="{{postData.pay_date}}"/>
+  <text-input name="pay_amount" text="回款金额" bindgetInput="getValue" defaultvalue="{{postData.pay_amount}}"/>
+  <select-item text="回款方式" name="pay_method" type="pay_method" selected="{{selected}}"/>
+  <area-item text="备注" name="note" defaultvalue="{{postData.note}}" bindgetInput="getValue"/>
 </view>

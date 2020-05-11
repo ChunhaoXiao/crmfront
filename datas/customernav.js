@@ -1,0 +1,22 @@
+module.exports.customernav = [
+  {
+    text:"资料",
+    name:"info",
+    api:""
+  },
+  {
+    text:"跟进",
+    name:"call",
+    api:""
+  },
+  {
+    text:"相关",
+    name:"related",
+    api:""
+  },
+  {
+    text:"联系人",
+    name:"contact",
+    api:""
+  }
+];

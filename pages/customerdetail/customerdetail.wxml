@@ -1,0 +1,85 @@
+<view>
+  <view class="customer-name">{{customer.name}}</view>
+  <view class="customer-level"><text class="level-name">{{customer.level}}</text></view>
+  <view></view>
+  <view class="nav">
+   <view class="{{type == item.name ? 'nav-active-item':''}}" wx:for="{{nav}}" bindtap="switchtab" data-name="{{item.name}}" wx:key="index">{{item.text}}</view>
+  </view>
+
+  <view class="main-content" wx:if="{{type == 'info'}}">
+    <view class="nav-title">客户资料</view>
+    <view class="item-info">
+     <text>客户来源</text>
+     <text>{{customer.source}}</text>
+    </view>
+    <view class="item-info">
+     <text>客户行业</text>
+     <text>{{customer.industry}}</text>
+    </view>
+
+    <view class="item-info">
+     <text>网址</text>
+     <text>{{customer.website}}</text>
+    </view>
+    <view class="item-info">
+     <text>创建人</text>
+     <text>{{customer.website}}</text>
+    </view>
+    <view class="item-info">
+     <text>创建时间</text>
+     <text>{{customer.created_at}}</text>
+    </view>
+    <view class="item-info">
+     <text>更新时间</text>
+     <text>{{customer.updated_at}}</text>
+    </view>
+    <view class="item-info">
+     <text>地址</text>
+     <text>{{customer.address}}</text>
+    </view>
+    <view class="nav-title">备注：{{customer.note}}</view>
+
+  </view>
+</view>
+
+<view wx:if="{{type == 'call'}}">
+  <call-list  customer="{{customer}}" wx:if="{{!showform}}"/>
+  <button bindtap="addCall" wx:if="{{!showform}}">添加</button>
+   <form wx:if="{{showform}}">
+    <picker bindchange="selectCall" value="{{index}}" range="{{calls}}" range-key="name">
+      <view class="picker">
+        跟进方式：{{calls[call_index].name}}
+      </view>
+    </picker>
+     <area-item text="跟进内容" name="content" bindgetInput="getValue" defaultvalue="{{postData.content}}"/>
+    <button type="primary" bindtap="createCall">确定</button>
+  </form>
+</view>
+
+
+
+
+<!-- <view class="main-content" wx:if="{{type == 'call'}}">
+  <scroll-view wx:if="{{!showform}}">
+     <call-item />
+     <call-item />
+  </scroll-view>
+  <button bindtap="addCall">添加</button>
+  <form wx:if="{{showform}}">
+   
+    <picker bindchange="selectCall" value="{{index}}" range="{{calls}}" range-key="name">
+      <view class="picker">
+        跟进方式：{{calls[call_index].name}}
+      </view>
+    </picker>
+     <area-item text="跟进内容" name="content" bindgetInput="getValue" defaultvalue="{{postData.content}}"/>
+    <button type="primary" bindtap="createCall">确定</button>
+  </form>
+</view> -->
+
+<view class="main-content" wx:if="{{type == 'related'}}">
+  <related customer="{{customer}}"/>
+</view>
+<view class="main-content" wx:if="{{type == 'contact'}}">
+联系人
+</view>

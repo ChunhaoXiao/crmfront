@@ -1,0 +1,10 @@
+<view>
+  <view class="header">
+    <view>2020-12-10</view>
+    <view>创建于7天前</view>
+  </view>
+  <view class="content">
+    <view>电话跟进</view>
+    <view>这是跟进的具体内容</view>
+  </view>
+</view>

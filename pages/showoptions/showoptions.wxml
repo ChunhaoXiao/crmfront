@@ -1,5 +1,5 @@
 <view class="container">
   <view>
-    <view bindtap="select" data-id="{{item.id}}" class="item" wx:for="{{ datas }}" wx:key="index">{{item.name}}</view>
+    <view bindtap="select" data-id="{{item.id}}" class="item" wx:for="{{ datas }}" wx:key="index">{{option == 'contracts' ?item.number: item.name}}</view>
   </view>
 </view>

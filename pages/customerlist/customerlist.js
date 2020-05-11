@@ -1,19 +1,20 @@
-// pages/paid/paid.js
-const api = require('../../utils/request')
+// pages/customerlist/customerlist.js
+const api = require('../../utils/request');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    page:1,
+    list:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getCustomers();
   },
 
   /**
@@ -65,33 +66,16 @@ Page({
 
   },
 
-  getValue(e) {
-    let exists = this.data.postData;
-    let datas = {...exists, ...e.detail}
-    console.log(datas);
-    this.setData({
-      postData:datas
-    });
-  },
-
-  sendData() {
-    let posts = this.data.postData;
-    //posts.products  = this.data.products.map(item => item.id) 
-    //console.log(posts);
-    
+  getCustomers() {
     api.request({
-      method:'POST',
-      data:posts,
+      method:'GET',
+      data:{page:this.data.page},
       success:res => {
-        wx.showToast({
-          title: '操作成功',
-        })
+        console.log(res);
         this.setData({
-          postData:{},
-          selected:{},
-          products:[]
+          list:res.data.data
         })
       }
-    }, 'payment')
+    }, 'customer')
   }
 })

@@ -1,0 +1,9 @@
+
+<view>
+  <select-item text="日程主题" type="agenda" name="type" selected="{{selected}}"/>
+  <text-input name="position" text="位置" bindgetInput="getValue" defaultvalue="{{postData.position}}"/>
+  <calendar-select text="开始时间" name="start_date" binddateset="getValue" selected_date="{{postData.start_date}}"/>
+  <calendar-select text="结束时间" name="end_date" binddateset="getValue" selected_date="{{postData.end_date}}"/>
+  <select-item text="提醒" type="remind" name="remind_time" selected="{{selected}}"/>
+  
+</view>

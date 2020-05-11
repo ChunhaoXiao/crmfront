@@ -1,5 +1,4 @@
-// pages/paid/paid.js
-const api = require('../../utils/request')
+// pages/agenda/agenda.js
 Page({
 
   /**
@@ -63,35 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  getValue(e) {
-    let exists = this.data.postData;
-    let datas = {...exists, ...e.detail}
-    console.log(datas);
-    this.setData({
-      postData:datas
-    });
-  },
-
-  sendData() {
-    let posts = this.data.postData;
-    //posts.products  = this.data.products.map(item => item.id) 
-    //console.log(posts);
-    
-    api.request({
-      method:'POST',
-      data:posts,
-      success:res => {
-        wx.showToast({
-          title: '操作成功',
-        })
-        this.setData({
-          postData:{},
-          selected:{},
-          products:[]
-        })
-      }
-    }, 'payment')
   }
 })

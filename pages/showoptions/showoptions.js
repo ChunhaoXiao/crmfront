@@ -88,7 +88,7 @@ Page({
     //console.log(selected_key);
     
     prevPage.setData({
-      [selected_key]:itemData.name,
+      [selected_key]:this.data.option == 'contracts' ? itemData.number : itemData.name,
       [key] : itemData.id
     })
     console.log(this.data.datas);

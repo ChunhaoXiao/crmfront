@@ -5,6 +5,9 @@
     "switch-item":"../components/switch-item/switch-item",
     "calendar-select" : "../components/calendarselect/index",
     "header-item":"../components/header/index",
-    "area-item" :"../components/textarea-item/index"
+    "area-item" : "../components/textarea-item/index",
+    "chooseimg" : "../components/chooseimg/index",
+    "product-item": "../components/product-item/index",
+    "business-product":"../components/business-product/index"
   }
 }

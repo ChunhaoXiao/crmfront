@@ -10,7 +10,10 @@
     "pages/product/product",
     "pages/business/business",
     "pages/contracts/contracts",
-    "pages/paid/paid"
+    "pages/paid/paid",
+    "pages/agenda/agenda",
+    "pages/customerlist/customerlist",
+    "pages/customerdetail/customerdetail"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -26,14 +29,10 @@
     {
       "pagePath": "pages/index/index",
       "text": "首页"
-    
-     
     },
     {
-      "pagePath": "pages/index/index",
-      "text": "客户"
-     
-      
+      "pagePath": "pages/customerlist/customerlist",
+      "text": "客户" 
     },
     {
       "pagePath": "pages/center/center",

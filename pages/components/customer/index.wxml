@@ -1,0 +1,19 @@
+<navigator class="container" url="/pages/customerdetail/customerdetail?id={{customer.id}}">
+  <view class="customer-name">
+    <view>{{customer.name}}</view>
+    <text>{{customer.created_time}}</text>
+  </view>
+  <view class="customer-info">
+    <view class="customer-level">
+      <text>{{customer.level}}</text>
+      <text>客户级别</text>
+    </view>
+    <view class="customer-level">
+      <text>dsfdsf</text>
+      <text>最后跟进时间</text>
+    </view>
+    <view class="customer-level">
+      <text>未成交</text>
+    </view>
+  </view>
+</navigator>

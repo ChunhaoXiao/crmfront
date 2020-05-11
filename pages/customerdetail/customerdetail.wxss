@@ -1,0 +1,41 @@
+.customer-name {
+  font-weight: 700;
+  text-align: center;
+}
+.customer-level {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rpx;
+}
+.level-name {
+  padding: 6rpx;
+  background-color: cornflowerblue;
+  border-radius: 20rpx;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30rpx;
+  margin-bottom: 50rpx;
+}
+
+.nav-title {
+  height: 50rpx;
+  line-height: 50rpx;
+  background-color: #E6E6E6;
+  padding-left: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.nav-active-item {
+  color: blue;
+  border-bottom: 3rpx solid green;
+}
+
+.item-info {
+  display: flex;
+  justify-content: space-between;
+  height: 50rpx;
+  padding:5rpx;
+}

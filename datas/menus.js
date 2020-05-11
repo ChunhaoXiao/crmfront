@@ -29,6 +29,6 @@ module.exports.menus = [
   },
   {
     text:"日程",
-    url:" "
+    url:"/pages/agenda/agenda"
   },
 ];

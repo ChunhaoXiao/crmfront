@@ -7,8 +7,8 @@
 
   <view class="form">
     <text-input text="客户名称" bind:getInput="getValue" defaultvalue="{{postData.name}}" name="name"/>
-    <select-item text="客户来源"  type="thread_from" name="source" selected="{{selected}}"/>
-    <select-item text="客户行业"  name="industry" type="thread_industry" selected="{{selected}}"/>
+    <select-item text="客户来源"  type="thread_from" name="source_id" selected="{{selected}}"/>
+    <select-item text="客户行业"  name="industry_id" type="thread_industry" selected="{{selected}}"/>
     <select-item text="客户级别"  name="customer_level" type="thread_level" selected="{{selected}}"/>
     <text-input text="地址" bind:getInput="getValue" name="address" defaultvalue="{{postData.address}}"></text-input>
     <text-input text="网址" bind:getInput="getValue" name="website" defaultvalue="{{postData.website}}"></text-input>

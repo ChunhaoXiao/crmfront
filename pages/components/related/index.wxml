@@ -1,0 +1,29 @@
+<view>
+  <view>
+    <view class="header">产品</view>
+    <view class="body">
+      <image src="{{datas.products.cover}}" class="thumb"></image>
+        <view class="description">
+          <text>{{datas.products.name}}</text>
+          <text>{{datas.products.description}}</text>
+        </view>
+        <view>查看</view>
+      </view>
+  </view>
+
+  <view>
+    <view class="header">
+     <view>商机</view>
+     <view>{{datas.business.name}}</view>
+    </view>
+    
+    <view class="body">
+      
+        <view class="description">
+          <text>{{datas.products.name}}</text>
+          <text>{{datas.products.description}}</text>
+        </view>
+        <view>查看</view>
+      </view>
+  </view>
+</view>

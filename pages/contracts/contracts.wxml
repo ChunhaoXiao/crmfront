@@ -7,8 +7,8 @@
 
   <text-input text="合同编号" name="number" bind:getInput="getValue" defaultvalue="{{postData.number}}"/>
   <text-input text="合同名称" name="name" bind:getInput="getValue"  defaultvalue="{{postData.name}}"/>
-  <select-item text="客户名称"  type="customer" name="customer_id" selected="{{selected}}"/>
-  <select-item text="商机名称"  type="business" name="business_id" selected="{{selected}}"/>
+  <select-item text="客户名称"  type="customers" name="customer_id" selected="{{selected}}"/>
+  <select-item text="商机名称"  type="businesses" name="business_id" selected="{{selected}}"/>
   <text-input text="合同金额" name="total_amount" bind:getInput="getValue"  defaultvalue="{{postData.total_amount}}"/>
   <calendar-select text="回款时间" binddateset="getValue" name="pay_date" selected_date="{{postData.pay_date}}"/>
   <calendar-select text="合同开始时间" binddateset="getValue" name="start_date" selected_date="{{postData.start_date}}"/>

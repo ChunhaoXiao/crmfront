@@ -1,0 +1,20 @@
+.body {
+  display: flex;
+  padding: 5rpx;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  flex:1;
+  margin-left: 20rpx;
+}
+.thumb {
+  width: 100rpx;
+  height: 100rpx;
+}
+.header {
+  padding: 5rpx;
+  border-bottom: 1rpx solid #E6E6E6;
+  margin-bottom: 15rpx;
+}

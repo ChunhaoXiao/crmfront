@@ -1,0 +1,5 @@
+<block wx:for="{{datas}}" wx:key="itme.id">
+<view>
+  {{item.content}}
+</view>
+</block>
