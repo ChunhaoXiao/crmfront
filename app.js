@@ -13,7 +13,8 @@ App({
           method:'POST',
           data:{code:res.code},
           success:res => {
-            console.log('token is',res.data.token);
+            
+            console.log('token is',res.data);
             wx.setStorageSync('token', res.data.token)
           }
         })

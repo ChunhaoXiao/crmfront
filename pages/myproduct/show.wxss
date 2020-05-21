@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .thumb {
+  width: 100rpx;
+  height: 100rpx;
+  padding: 5rpx;
+}
+.info-title {
+  background-color: #E6E6E6;
+  padding: 5rpx;
+}
+.description-body {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rpx;
+}
+
+.image-body {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rpx;
+}

@@ -81,5 +81,5 @@
   <related customer="{{customer}}"/>
 </view>
 <view class="main-content" wx:if="{{type == 'contact'}}">
-联系人
+ <contact customer="{{customer}}"/>
 </view>

@@ -23,5 +23,5 @@
 
   <!---列表-->
   <view wx-if="{{!showform}}" class="container">
-    <product-item wx:for="{{datas}}" wx:key="index"  selected="{{products}}"  product="{{item}}" bind:productselected="productselected"/>
+    <product-item wx:for="{{datas}}" wx:key="index" type="add"  selected="{{products}}"  product="{{item}}" bind:productselected="productselected"/>
   </view>

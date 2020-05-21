@@ -1,0 +1,10 @@
+.info-body {
+  display: flex;
+  justify-content: space-around;
+}
+.info-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

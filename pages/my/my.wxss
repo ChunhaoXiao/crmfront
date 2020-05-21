@@ -1,0 +1,25 @@
+page {
+  height: 100%;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.top {
+  background-color: aqua;
+  flex:3
+}
+.nav {
+  flex:1;
+  display: flex;
+  justify-content: space-around;
+}
+.list {
+  flex:4
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,1 @@
+<thread wx:for="{{datas}}" wx:key="index" thread="{{item}}"/>

@@ -1,0 +1,23 @@
+
+<navigator class="main" url="/pages/mypayment/show?id={{payment.id}}">
+  <view class="header">
+    <text>回款编号：{{payment.pay_number}}</text>
+    <text>创建于{{payment.created_time}}</text>
+  </view>
+  <view class="body">
+  
+  <view class="body-item">
+    <text>{{payment.contract.name}}</text>
+    <text>合同</text>
+  </view>
+
+  <view class="body-item">
+    <text>{{payment.customer.name}}</text>
+    <text>客户</text>
+  </view>
+  <view class="body-item">
+    <text>{{payment.pay_amount}}</text>
+    <text>回款金额</text>
+  </view>
+  </view>
+</navigator>

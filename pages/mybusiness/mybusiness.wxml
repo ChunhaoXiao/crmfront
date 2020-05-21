@@ -1,0 +1,5 @@
+<view>
+  <view>
+    <business-item wx:for="{{datas}}" wx:key="index" business="{{item}}"/>
+  </view>
+</view>

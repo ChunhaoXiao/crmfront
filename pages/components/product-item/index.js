@@ -7,6 +7,10 @@ Component({
     product: {
       type:Object
     },
+    type: {
+      type:String,
+      default:'add'
+    }
   },
 
   /**

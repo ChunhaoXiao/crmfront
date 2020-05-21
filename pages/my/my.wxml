@@ -1,0 +1,10 @@
+<view class="body">
+  <view class="top">asdsad</view> 
+  <view class="nav">
+      <navigator url="{{item.url}}"  wx:for="{{mynavs}}" class="nav-item">
+         {{item.text}}
+         <text>icon</text>
+      </navigator>
+  </view>
+  <view class="list">sdfdsfds</view>
+</view>

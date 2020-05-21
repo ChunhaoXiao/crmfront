@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
     "pages/center/center",
@@ -13,45 +13,50 @@
     "pages/paid/paid",
     "pages/agenda/agenda",
     "pages/customerlist/customerlist",
-    "pages/customerdetail/customerdetail"
+    "pages/customerdetail/customerdetail",
+    "pages/my/my",
+    "pages/myproduct/myproduct",
+    "pages/myproduct/show",
+    "pages/mythread/mythread",
+    "pages/mythread/show",
+    "pages/mybusiness/mybusiness",
+    "pages/mybusiness/show",
+    "pages/mypayment/mypayment",
+    "pages/mypayment/show",
+    "pages/mycontract/mycontract",
+    "pages/mycontract/show"
+   
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-    
+    "navigationBarTextStyle": "black"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
   "tabBar": {
     "list": [
-    {
-      "pagePath": "pages/index/index",
-      "text": "首页"
-    },
-    {
-      "pagePath": "pages/customerlist/customerlist",
-      "text": "客户" 
-    },
-    {
-      "pagePath": "pages/center/center",
-      "text": "+"
-     
-     
-    },
-    {
-      "pagePath": "pages/index/index",
-      "text": "消息"
-     
-      
-    },
-    {
-      "pagePath": "pages/logs/logs",
-      "text": "我的"
-     
-      
-    }
-  ]
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/customerlist/customerlist",
+        "text": "客户"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "+"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
   }
 }

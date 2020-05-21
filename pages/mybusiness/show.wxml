@@ -1,0 +1,20 @@
+<view>
+  <view class="header">
+    <view>商机详情</view>
+    <view>{{business.name}}</view>
+    <view>{{business.level}}</view>
+  </view>
+  <view class="info-title">基本资料</view>
+  <view>
+    <text>客户名称：</text>
+    <text>{{business.customer}}</text>
+  </view>
+  <view>
+    <text>预计成交时间：</text>
+    <text>{{business.expected_deal_date}}</text>
+  </view>
+  <view class="info-title">产品信息</view>
+  <scroll-view>
+    <product wx:for="{{business.product}}" product="{{item}}" type="list"/>
+  </scroll-view>
+</view>

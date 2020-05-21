@@ -1,0 +1,36 @@
+<view>
+  <view class="header">
+    <view>回款详情</view>
+    <view>{{payment.pay_number}}</view>
+    <view></view>
+  </view>
+  <view class="info-title">基本资料</view>
+  <view>
+    <text>回款编号：</text>
+    <text>{{payment.pay_number}}</text>
+  </view>
+  <view>
+    <text>合同：</text>
+    <text>{{payment.contract.name}}</text>
+  </view>
+  <view>
+    <text>客户：</text>
+    <text>{{payment.customer.name}}</text>
+  </view>
+  <view>
+    <text>回款日期：</text>
+    <text>{{payment.pay_date}}</text>
+  </view>
+  <view>
+    <text>回款金额：</text>
+    <text>{{payment.pay_amount}}</text>
+  </view>
+  <view>
+    <text>回款方式：</text>
+    <text>{{payment.paymethod.name}}</text>
+  </view>
+   <view>
+    <text>备注：</text>
+    <text>{{payment.note}}</text>
+  </view>
+</view>

@@ -1,0 +1,1 @@
+<product-item wx:for="{{datas}}" wx:key="index" product="{{item}}" type="list"/>

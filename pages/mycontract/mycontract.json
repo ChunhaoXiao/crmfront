@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "contract-item" : "../components/contract-item/index"
+  }
+}

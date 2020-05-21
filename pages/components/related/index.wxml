@@ -1,5 +1,5 @@
 <view>
-  <view>
+  <view class="item"  wx:if="{{datas.products.name}}">
     <view class="header">产品</view>
     <view class="body">
       <image src="{{datas.products.cover}}" class="thumb"></image>
@@ -20,10 +20,52 @@
     <view class="body">
       
         <view class="description">
-          <text>{{datas.products.name}}</text>
-          <text>{{datas.products.description}}</text>
+          <text>{{datas.business.customer.name}}</text>
+          <text>客户名称</text>
+        </view>
+        <view class="description">
+          <text>{{datas.business.expected_deal_date}}</text>
+          <text>预计成交时间</text>
         </view>
         <view>查看</view>
       </view>
-  </view>
+    </view>
+
+
+    <view>
+    <view class="header">
+      <view> 合同 </view>
+      <view>{{datas.contract.name}}</view>
+    </view>
+    <view class="body">
+        <view class="description">
+          <text>{{datas.contract.name}}</text>
+          <text>客户名称</text>
+        </view>
+        <view class="description">
+          <text>{{datas.contract.total_amount}}</text>
+          <text>合同金额</text>
+        </view>
+        <view>查看</view>
+      </view>
+    </view>
+
+  <view>
+    <view class="header">
+      <view> 回款 </view>
+      <view>{{datas.payment.pay_number}}</view>
+    </view>
+    <view class="body">
+        <view class="description">
+          <text>{{datas.payment.customer.name}}</text>
+          <text>客户名称</text>
+        </view>
+        <view class="description">
+          <text>{{datas.contract.total_amount}}</text>
+          <text>合同金额</text>
+        </view>
+        <view>查看</view>
+      </view>
+    </view>
+
 </view>

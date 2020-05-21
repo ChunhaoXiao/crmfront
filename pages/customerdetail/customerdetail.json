@@ -3,6 +3,7 @@
     "call-item":"../components/call-item/index",
     "area-item" : "../components/textarea-item/index",
     "call-list" : "../components/calls/index",
-    "related" : "../components/related/index"
+    "related" : "../components/related/index",
+    "contact" : "../components/contact/index"
   }
 }

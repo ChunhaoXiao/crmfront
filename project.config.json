@@ -33,6 +33,7 @@
 	"isGameTourist": false,
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -68,6 +69,13 @@
 					"id": -1,
 					"name": "pages/contracts/contracts",
 					"pathName": "pages/contracts/contracts",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mycontract/mycontract",
+					"pathName": "pages/mycontract/mycontract",
 					"scene": null
 				}
 			]

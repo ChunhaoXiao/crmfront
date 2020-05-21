@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="header">
+    <text>{{contract.name}}</text>
+    <text>2020-05-02~2020-05-25</text>
+  </view>
+  <view class="body">
+    <view class="body-item">
+      <text class="value">王德军</text>
+      <text class="label">客户名称</text>
+    </view>
+    <view class="body-item">
+       <text class="value">2300元</text>
+      <text class="label">合同金额</text>
+    </view>
+    <view class="body-item">
+       <text class="value">2020-05-25</text>
+      <text class="label">回款时间</text>
+    </view>
+  </view>
+</view>

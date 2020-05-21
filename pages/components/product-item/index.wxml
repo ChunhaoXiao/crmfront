@@ -4,7 +4,10 @@
       <text>{{product.name}}</text>
       <view class="description">{{product.description}}</view>
   </view>
-  <view class="btn" bindtap="selectProduct">
+  <view class="btn" bindtap="selectProduct" wx:if="{{type == 'add'}}">
     点击添加
   </view>
+  <navigator url="/pages/myproduct/show?id={{product.id}}" class="btn"  wx:if="{{type == 'list'}}">
+    查看
+  </navigator>
 </view>

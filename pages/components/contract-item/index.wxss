@@ -1,0 +1,29 @@
+.container {
+  padding: 10rpx;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx;
+  border-bottom: 1rpx solid #E6E6E6;
+}
+
+.body {
+  margin-top: 25rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.body-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.value {
+  color: blue;
+}
+.label {
+  color: grey;
+}

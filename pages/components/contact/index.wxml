@@ -1,0 +1,16 @@
+<view>
+  <view class="header"></view>
+  <block wx:for="{{datas}}">
+    <view class="info-body">
+      <view class="info-item">
+        <text>{{item.name}}</text>
+        <text>联系人</text>
+      </view>
+      <view class="info-item">
+        <text>{{item.mobile}}</text>
+        <text>联系方式</text>
+      </view>
+      <view>拨打电话</view>
+    </view>
+  </block>
+</view>
