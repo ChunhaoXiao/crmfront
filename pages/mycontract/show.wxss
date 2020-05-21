@@ -1,1 +1,17 @@
-/* pages/mycontract/show.wxss */
+.container {
+  padding: 10rpx;
+}
+.header {
+  display: flex;
+  justify-content: center;
+}
+.item-body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15rpx;
+  border-bottom: 1rpx solid #E6E6E6;
+  padding-bottom: 10rpx;
+}
+.value {
+  color: blue;
+}

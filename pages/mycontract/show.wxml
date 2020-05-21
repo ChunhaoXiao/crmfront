@@ -1,2 +1,48 @@
-<!--pages/mycontract/show.wxml-->
-<text>pages/mycontract/show.wxml</text>
+<view class="container">
+  <view class="header"><text>合同详情</text></view>
+
+  <view class="item-body">
+    <view class="label">合同编号</view>
+    <view class="value">{{contract.number}}</view>
+  </view>
+  <view class="item-body">
+    <view class="label">合同名称</view>
+    <view class="value">{{contract.name}}</view>
+  </view>
+  <view class="item-body">
+    <view class="label">客户名称</view>
+    <view class="value">{{contract.customer.name}}</view>
+  </view>
+  <view class="item-body">
+    <view class="label">商机名称</view>
+    <view class="value">{{contract.business.name}}</view>
+  </view>
+  <view class="item-body">
+    <view class="label">合同金额</view>
+    <view class="value">{{contract.total_amount}}</view>
+  </view>
+  <view class="item-body">
+    <view class="label">回款时间</view>
+    <view class="value">{{contract.pay_date}}</view>
+  </view>
+  <view class="item-body">
+    <view class="label">合同开始时间</view>
+    <view class="value">{{contract.start_date}}</view>
+  </view>
+  <view class="item-body">
+    <view class="label">合同结束时间</view>
+    <view class="value">{{contract.end_date}}</view>
+  </view>
+  <view class="item-body">
+    <view class="label">客户签约人</view>
+    <view class="value">{{contract.customer_sign_name}}</view>
+  </view>
+  <view class="item-body">
+    <view class="label">公司签约人</view>
+    <view class="value">{{contract.company_sign_name}}</view>
+  </view>
+  <view class="item-body">
+    <view class="label">合同存档</view>
+    <view class="value"></view>
+  </view>
+</view>

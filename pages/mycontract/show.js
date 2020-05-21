@@ -1,18 +1,27 @@
 // pages/mycontract/show.js
+const api = require('../../utils/request')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    contract:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const id = options.id
+    api.request({
+      success:res => {
+        this.setData({
+          contract:res.data
+        })
+        console.log(res)
+      }
+    }, 'contract/'+id)
   },
 
   /**

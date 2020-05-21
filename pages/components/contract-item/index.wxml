@@ -1,20 +1,20 @@
-<view class="container">
+<navigator class="container" url="/pages/mycontract/show?id={{contract.id}}">
   <view class="header">
     <text>{{contract.name}}</text>
-    <text>2020-05-02~2020-05-25</text>
+    <text>{{contract.start_date}}~{{contract.end_date}}</text>
   </view>
   <view class="body">
     <view class="body-item">
-      <text class="value">王德军</text>
+      <text class="value">{{contract.customer.name}}</text>
       <text class="label">客户名称</text>
     </view>
     <view class="body-item">
-       <text class="value">2300元</text>
+       <text class="value">{{contract.total_amount}}</text>
       <text class="label">合同金额</text>
     </view>
     <view class="body-item">
-       <text class="value">2020-05-25</text>
+       <text class="value">{{contract.pay_date}}</text>
       <text class="label">回款时间</text>
     </view>
   </view>
-</view>
+</navigator>
