@@ -37,12 +37,16 @@
     <view class="label">客户签约人</view>
     <view class="value">{{contract.customer_sign_name}}</view>
   </view>
+
   <view class="item-body">
     <view class="label">公司签约人</view>
     <view class="value">{{contract.company_sign_name}}</view>
   </view>
-  <view class="item-body">
+
+  <view>
     <view class="label">合同存档</view>
-    <view class="value"></view>
+    <view class="archive">
+      <image wx:for="{{contract.archive}}" wx:key="index" src="{{item}}" bindtap="browse"></image>
+    </view>
   </view>
 </view>

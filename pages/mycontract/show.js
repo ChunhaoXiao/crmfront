@@ -17,7 +17,7 @@ Page({
     api.request({
       success:res => {
         this.setData({
-          contract:res.data
+          contract:res.data.data
         })
         console.log(res)
       }
@@ -71,5 +71,10 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  browse() {
+    wx.previewImage({
+      urls: this.data.contract.archive 
+    })
   }
 })
