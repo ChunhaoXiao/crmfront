@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
+const api = require('../../utils/request');
 Page({
   data: {
     motto: 'Hello World',
@@ -50,5 +50,21 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  afterTapDay(e) {
+    const year = e.detail.year
+    const month = e.detail.month
+    const day = e.detail.day
+    const fullyear = year+'-'+month+'-'+day;
+    api.request({
+        data:{date:fullyear},
+        success:res => {
+          console.log(res.data);
+          this.setData({
+            datas:res.data
+          })
+        }
+    }, 'agenda')
   }
 })

@@ -1,13 +1,27 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+  <view>
+    <calendar bind:onTapDay="onTapDay" bind:afterTapDay="afterTapDay"/>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+  <view>
+    <view wx:if="{{datas.AM}}">
+      <view>上午</view>
+      <agenda-item wx:for="{{datas.AM}}" agenda="{{item}}" wx:key="index"/>
+    </view>
+
+    <view wx:if="{{datas.PM}}">
+      <view>下午</view>
+      <agenda-item wx:for="{{datas.PM}}" agenda="{{item}}" wx:key="index"/>
+    </view>
+    
+    <!-- <view wx:for="{{datas}}" wx:key="index" class="info-container">
+        <view style="display:flex;justify-content:space-between">
+          <text>{{item.theme}}</text>
+          <text>时间：{{item.start_time}}</text>
+          <text></text>
+        </view>
+    </view> -->
   </view>
+
 </view>

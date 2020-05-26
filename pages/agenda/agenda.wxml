@@ -1,9 +1,24 @@
 
 <view>
-  <select-item text="日程主题" type="agenda" name="type" selected="{{selected}}"/>
+ <view class="header-container">
+    <view>取消</view>
+    <view>添加合同</view>
+    <view bindtap="sendData">创建</view>
+  </view>
+  <select-item text="日程主题" type="agenda" name="theme" selected="{{selected}}"/>
   <text-input name="position" text="位置" bindgetInput="getValue" defaultvalue="{{postData.position}}"/>
-  <calendar-select text="开始时间" name="start_date" binddateset="getValue" selected_date="{{postData.start_date}}"/>
-  <calendar-select text="结束时间" name="end_date" binddateset="getValue" selected_date="{{postData.end_date}}"/>
+  <!-- <calendar-select text="开始时间" name="start_date" binddateset="getValue" selected_date="{{postData.start_date}}"/> -->
+  <view class="time-picker">
+    <text>开始时间</text>
+    <date-time mode="dateTime" bind:onPickerChange="onPickerChange" data-name="start_time"/>
+  </view>
+
+  <view class="time-picker">
+    <text>结束时间</text>
+    <date-time mode="dateTime" bind:onPickerChange="onPickerChange" data-name="end_time"/>
+  </view>
   <select-item text="提醒" type="remind" name="remind_time" selected="{{selected}}"/>
-  
+  <select-item  text="关联客户" type="customers" name="related_customer" selected="{{selected}}"/>
+  <select-item  text="关联联系人" type="contacts" name="related_contact" selected="{{selected}}"/>
+  <area-item text="备注" name="description" bindgetInput="getValue" defaultvalue="{{postData.description}}"/>
 </view>

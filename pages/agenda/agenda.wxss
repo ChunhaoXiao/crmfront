@@ -1,1 +1,7 @@
-/* pages/agenda/agenda.wxss */
+.time-picker {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10rpx;
+  padding: 10rpx;
+}

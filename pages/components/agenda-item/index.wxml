@@ -1,0 +1,11 @@
+<view>
+  <view class="group"></view>
+  <view class="body">
+    <view class="time">{{agenda.time}}</view>
+    <view class="content">
+      <text class="title">{{agenda.theme}}</text>
+      <text class="description">{{agenda.description}}</text>
+    </view>
+    <view class="right">{{agenda.status}}</view>
+  </view>
+</view>

@@ -1,4 +1,5 @@
 // pages/agenda/agenda.js
+const api = require('../../utils/request');
 Page({
 
   /**
@@ -12,7 +13,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    api.request({
+      success:res => {
+        this.setData({
+          agenda:res.data.data
+        })
+      }
+    }, 'options/agenda')
   },
 
   /**
@@ -62,5 +69,36 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  
+  getValue(e) {
+    let exists = this.data.postData;
+    let datas = {...exists, ...e.detail}
+    console.log(datas);
+    this.setData({
+      postData:datas
+    });
+  },
+
+  sendData() {
+    //console.log(this.data.postData);
+    api.request({
+      method:'POST',
+      data:this.data.postData,
+      success:res => {
+        console.log(res);
+        this.setData({
+          postData:{}
+        })
+      }
+    }, 'agenda')
+  },
+
+  onPickerChange(e) {
+    const name = e.currentTarget.dataset.name;
+    const key = "postData."+name;
+    this.setData({
+      [key] : e.detail.value
+    })
+  },
 })
