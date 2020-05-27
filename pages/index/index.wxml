@@ -1,15 +1,21 @@
 <!--index.wxml-->
 <view class="container">
+  <view class="tab-container">
+    <text class="tab-item {{currentTab == 'agenda' ? 'item-active' : ''}}" bindtap="changeTab" data-tab="agenda">日程</text>
+    <text class="tab-item {{currentTab == 'statistic' ? 'item-active' : ''}}" bindtap="changeTab" data-tab="statistic">仪表盘</text>
+  </view>
+<view wx:if="{{currentTab == 'agenda'}}">
+<view class="title">你好，{{datas.user}}</view>
   <view>
     <calendar bind:onTapDay="onTapDay" bind:afterTapDay="afterTapDay"/>
   </view>
-
+  
   <view>
     <view wx:if="{{datas.AM}}">
       <view>上午</view>
       <agenda-item wx:for="{{datas.AM}}" agenda="{{item}}" wx:key="index"/>
     </view>
-
+    
     <view wx:if="{{datas.PM}}">
       <view>下午</view>
       <agenda-item wx:for="{{datas.PM}}" agenda="{{item}}" wx:key="index"/>
@@ -23,5 +29,8 @@
         </view>
     </view> -->
   </view>
-
+</view>
+<view wx:if="{{currentTab == 'statistic'}}">
+  <statistic />
+</view>  
 </view>

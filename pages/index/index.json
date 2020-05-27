@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "calendar" : "../components/calendar",
-    "agenda-item" : "../components/agenda-item/index"
+    "agenda-item" : "../components/agenda-item/index",
+    "statistic" : "../components/statistics/index"
   }
 }

@@ -1,0 +1,5 @@
+<view>销售简报</view>
+<view class="container">
+    
+    <static-item wx:for="{{items}}" obj="{{item}}"/>
+</view>

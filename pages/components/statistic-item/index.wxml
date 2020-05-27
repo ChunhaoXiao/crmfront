@@ -1,0 +1,11 @@
+<view class="item-container">
+
+    <view class="left"><image class="icon" src="{{obj.icon}}"></image></view>
+
+    <view class="right">
+      <view>{{obj.text}}</view>
+      <view>0个</view>
+    </view>
+
+</view>
+

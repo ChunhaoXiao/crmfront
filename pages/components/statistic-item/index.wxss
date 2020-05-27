@@ -1,0 +1,23 @@
+
+.item-container {
+  display: flex;
+  align-items: center;
+  width: 360rpx;
+  justify-content: space-around;
+  height: 140rpx;
+  padding: 5rpx;
+}
+
+.left {
+  flex:1;
+}
+.right {
+  flex:4
+}
+
+.icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+
