@@ -1,5 +1,5 @@
 <view class="tab-container">
     <!-- <text class="tab-item {{currentTab == 'agenda' ? 'item-active' : ''}}" bindtap="changeTab" data-tab="agenda">日程</text>
     <text class="tab-item {{currentTab == 'statistic' ? 'item-active' : ''}}" bindtap="changeTab" data-tab="statistic">仪表盘</text> -->
-    <text wx:for="{{options}}" class="tab-item {{currentTab == 'agenda' ? 'item-active' : ''}}" bindtap="changeTab" data-tab="agenda">日程</text>
-  </view>
+    <text wx:for="{{options}}" class="tab-item {{currentTab == item.name ? 'item-active' : ''}}" bindtap="changeTab" data-tab="{{item.name}}">{{item.text}}</text>
+</view>

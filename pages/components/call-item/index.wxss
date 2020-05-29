@@ -1,9 +1,59 @@
+.container {
+  border-top: 15rpx solid #F5F6FA;
+  padding-top: 15rpx;
+  padding-bottom: 20rpx;
+}
 .header {
   display: flex;
   justify-content: space-between;
+
+  align-items: center;
+  border-bottom: 1rpx solid  #F5F6FA;
+  margin-bottom: 10rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  padding-bottom: 10rpx;
 }
 
 .content {
   display: flex;
   flex-direction: column;
+}
+
+.time {
+  font-size:40rpx;
+  color: #4E7FF5;
+  font-weight: 600;
+}
+
+.created-description {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}
+
+.call-phone {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 18rpx;
+}
+.call-type {
+  padding-left: 10rpx;
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+  color: #999999;
+  font-weight: 600;
+}
+
+.call-content {
+  margin:10rpx;
+  color: #333333;
 }

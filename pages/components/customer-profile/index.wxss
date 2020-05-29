@@ -1,0 +1,16 @@
+.title {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left:20rpx;
+  padding-right: 20rpx;
+  background-color: #F5F6FA;
+  font-weight: 600;
+}
+
+.note-label {
+  padding:20rpx;
+  font-weight: 600;
+}
+.note {
+  padding:10rpx 20rpx;
+}

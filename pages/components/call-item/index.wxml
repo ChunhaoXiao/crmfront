@@ -1,10 +1,18 @@
-<view>
+<view class="container">
   <view class="header">
-    <view>2020-12-10</view>
-    <view>创建于7天前</view>
-  </view>
-  <view class="content">
-    <view>电话跟进</view>
-    <view>这是跟进的具体内容</view>
+    <view class="time">{{call.created_date}}</view>
+    <view class="created-description">
+    <image src="/icons/folder.png" class="icon"></image>
+    <text>{{call.from_now}}</text>
+    </view>
+  </view> 
+  <view class="body">
+    <view class="call-type">
+
+      <image class="call-phone" src="/icons/call-phone.png" wx:if="{{call.type.name == '电话跟进'}}"></image>
+       <image class="call-phone" src="/icons/email-icon.png" wx:if="{{call.type.name == '邮件跟进'}}"></image>
+      <text>{{call.type.name}}</text>
+    </view>
+    <view class="call-content">{{call.content}}</view>
   </view>
 </view>

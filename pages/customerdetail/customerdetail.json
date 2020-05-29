@@ -4,6 +4,7 @@
     "area-item" : "../components/textarea-item/index",
     "call-list" : "../components/calls/index",
     "related" : "../components/related/index",
-    "contact" : "../components/contact/index"
+    "contact" : "../components/contact/index",
+    "customer-profile" : "../components/customer-profile/index"
   }
 }

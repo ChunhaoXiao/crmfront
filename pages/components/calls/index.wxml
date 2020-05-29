@@ -1,5 +1,29 @@
-<block wx:for="{{datas}}" wx:key="itme.id">
-<view>
-  {{item.content}}
+<view wx:if="{{!showform}}">
+  <scroll-view class="call-container" scroll-y="true">
+    <call-item wx:for="{{datas}}" wx:key="index" call="{{item}}"/>
+  </scroll-view>
+  <view>
+  </view>
+
+  <view class="add">
+     <image src="/icons/add-call.png" class="add-icon" bindtap="addCall"></image>
+  </view>
+ 
 </view>
-</block>
+
+<view wx:if="{{showform}}">
+   <form>
+      <picker bindchange="selectCall" value="{{index}}" range="{{calls}}" range-key="name" class="call-picker">
+        <view class="picker">
+          跟进方式 {{calls[call_index].name}}
+        </view>
+      </picker>
+
+      <view class="call-content">
+        <area-item text="跟进内容" name="content" bindgetInput="getValue" defaultvalue="{{postData.content}}"/>
+      </view>
+      
+      <button type="primary" bindtap="createCall" style="width:100%">确定</button>
+
+    </form>
+</view>

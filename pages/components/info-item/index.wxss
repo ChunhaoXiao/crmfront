@@ -1,0 +1,20 @@
+.body {
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  align-items: center;
+  
+  border-bottom: 1rpx solid #E4EAEF;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  color: #999999;
+}
+
+.value {
+  color: #333333;
+  font-weight: 500;
+}
+
+.label{
+  flex:1
+}

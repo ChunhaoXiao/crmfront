@@ -1,4 +1,4 @@
-<navigator class="container" url="/pages/customerdetail/customerdetail?id={{customer.id}}">
+<!-- <navigator class="container" url="/pages/customerdetail/customerdetail?id={{customer.id}}">
   <view class="customer-name">
     <view>{{customer.name}}</view>
     <text>{{customer.created_time}}</text>
@@ -16,4 +16,29 @@
       <text>未成交</text>
     </view>
   </view>
+</navigator> -->
+
+<navigator class="container" url="/pages/customerdetail/customerdetail?id={{customer.id}}">
+  <view class="customer-name">
+    <view class="company">{{customer.name}}</view>
+    <view class="created">
+      <image src="/icons/folder.png" class="folder"></image>
+      <text>创建于3天前</text>
+    </view>
+  </view>
+  <view class="customer-info">
+    <view class="customer-level">
+      <text class="name">{{customer.level}}</text>
+      <text class="label">客户级别</text>
+    </view>
+    <view class="customer-level">
+      <text class="name">{{customer.last_call_time}}</text>
+      <text class="label">最后跟进时间</text>
+    </view>
+    <view class="status">
+      <view class="btn-status">未成交</view> 
+    </view>
+  </view>
 </navigator>
+
+

@@ -1,10 +1,10 @@
-// pages/components/call-item/index.js
+// pages/components/customer-profile/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    call:{
+    customer: {
       type:Object
     }
   },

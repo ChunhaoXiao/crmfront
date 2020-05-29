@@ -1,0 +1,16 @@
+<view class="body">
+  <view class="title">客户资料</view>
+  <info-item name="客户来源" value="{{customer.source}}"/>
+  <info-item name="客户行业" value="{{customer.industry}}"/>
+  <info-item name="网址" value="{{customer.website}}"/>
+  <info-item name="客户名称" value="{{customer.name}}"/>
+  <info-item name="创建时间" value="{{customer.created_at}}"/>
+  <info-item name="更新时间" value="{{customer.updated_at}}"/>
+  <info-item name="地址" value="{{customer.address}}"/>
+
+  <view>
+    <view class="note-label">备注</view>
+    <view class="note">{{customer.note}}</view>
+  </view>
+  
+</view>

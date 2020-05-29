@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "customer-item":"../components/customer/index"
+    "customer-item": "../components/customer/index",
+    "contact-item" : "../components/contact-item/index"
   }
 }

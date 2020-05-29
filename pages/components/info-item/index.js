@@ -1,11 +1,16 @@
-// pages/components/call-item/index.js
+// pages/components/info-item/index.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-    call:{
-      type:Object
+    name:{
+      type:String,
+      default:''
+    },
+    value:{
+      type:String,
+      default:''
     }
   },
 

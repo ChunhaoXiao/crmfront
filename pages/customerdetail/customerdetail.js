@@ -98,22 +98,13 @@ Page({
     })
     console.log(name)
   },
-  addCall() {
-    this.setData({
-      showform:true,
-      "postData.customer_id" : this.data.customer.id
-    })
-    api.request({
-      method:'GET',
-      success: res => {
-        console.log(res.data.data)
-        this.setData({
-          calls:res.data.data,
-          "postData.call_method_id":res.data.data[0].id
-        })
-      }
-    }, 'options/call_method');
-  },
+  // addCall() {
+  //   this.setData({
+  //     showform:true,
+  //     "postData.customer_id" : this.data.customer.id
+  //   })
+    
+  // },
   selectCall(e) {
     const index = e.detail.value;
     this.setData({

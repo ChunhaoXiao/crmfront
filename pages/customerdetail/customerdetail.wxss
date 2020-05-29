@@ -5,19 +5,24 @@
 .customer-level {
   display: flex;
   justify-content: center;
-  margin-top: 10rpx;
+  margin-top: 15rpx;
 }
 .level-name {
-  padding: 6rpx;
-  background-color: cornflowerblue;
-  border-radius: 20rpx;
+  padding: 10rpx 20rpx;
+  background-color: #77A9FB;
+  color: white;
+  border-radius: 30rpx;
+  font-size: 26rpx;
+  font-weight: 600;
 }
 
 .nav {
   display: flex;
   justify-content: space-around;
   margin-top: 30rpx;
-  margin-bottom: 50rpx;
+  margin-bottom: 15rpx;
+  color: #333333;
+  font-weight: 600;
 }
 
 .nav-title {
@@ -29,8 +34,9 @@
 }
 
 .nav-active-item {
-  color: blue;
-  border-bottom: 3rpx solid green;
+  color:#4E7FF5;
+  border-bottom: 5rpx solid #4E7FF5;
+  padding-bottom: 6rpx;
 }
 
 .item-info {

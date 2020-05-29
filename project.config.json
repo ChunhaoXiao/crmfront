@@ -76,6 +76,13 @@
 					"id": -1,
 					"name": "pages/mycontract/mycontract",
 					"pathName": "pages/mycontract/mycontract",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/customerdetail/customerdetail",
+					"pathName": "pages/customerdetail/customerdetail",
 					"scene": null
 				}
 			]

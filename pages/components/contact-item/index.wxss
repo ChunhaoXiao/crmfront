@@ -20,7 +20,6 @@
   display: flex;
   justify-content: space-between;
   padding: 10rpx;
-  align-items: center;
 }
 
 .customer-level {
@@ -42,7 +41,7 @@
 }
 
 .name {
-  font-size: 32rpx;
+  font-size: 40rpx;
   color: #4E7FF5;
 }
 .label {
@@ -64,16 +63,5 @@
   width: 30rpx;
   height: 30rpx;
   margin-right: 10rpx;
-}
-
-.btn-status {
-  width: 150rpx;
-  height: 56rpx;
-  background-color: #FFBE58;
-  line-height: 56rpx;
-  text-align: center;
-  border-radius: 25rpx;
-  color:white;
-  font-size: 24rpx;
 }
 

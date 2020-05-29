@@ -1,1 +1,35 @@
-/* pages/components/calls/index.wxss */
+.call-container {
+  height: 800rpx;
+
+}
+.add {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-icon {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: 20rpx;
+  margin-right: 80rpx;
+}
+
+.form-item {
+  display: flex;
+  border-top: 10rpx solid #999999;
+}
+
+.call-picker {
+  width: 100%;
+  border-top:15rpx solid #F5F6FA;
+  padding: 10rpx;
+}
+
+.call-content {
+  border-top: 15rpx solid #F5F6FA;
+}
+
+.submit-button {
+  width: 100%;
+}
+

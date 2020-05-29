@@ -1,3 +1,9 @@
 <view>
-  <customer-item wx:for="{{list}}" customer="{{item}}" wx:key="index"/>
+  <tab-item options="{{tabs}}" bindchangetab="changetab" />
+  <view wx:if="{{type == 'customer'}}">
+    <customer-item wx:for="{{list.customer}}" customer="{{item}}" wx:key="index" />
+  </view>
+  <view wx:if="{{type == 'contact'}}">
+    <contact-item   wx:for="{{list.contact}}" contact="{{item}}" wx:key="index" />
+  </view>
 </view>
