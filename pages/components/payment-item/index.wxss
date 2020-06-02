@@ -7,13 +7,23 @@
 }
 
 .body {
+  margin-top: 25rpx;
   display: flex;
   justify-content: space-between;
+  padding: 10rpx;
 }
 
 .body-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+}
+
+.value {
+  color:#4E7FF5;
+  font-weight: 600;
+}
+.label {
+  color: grey;
 }

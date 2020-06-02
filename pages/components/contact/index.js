@@ -1,12 +1,27 @@
 // pages/components/contact/index.js
 const api = require('../../../utils/request');
 Component({
+
+  lifetimes: {
+    attached:function() {
+      console.log('customer', this.data.customer);
+      api.request({
+        methods:'GET',
+        success:res => {
+          console.log('contact:',res);
+          this.setData({
+            datas:res.data
+          })
+        }
+      }, this.data.customer.id+'/contact')
+    }
+  },
   /**
    * 组件的属性列表
    */
   properties: {
     customer: {
-      type:Object,
+      type:Object
     }
   },
 
@@ -22,19 +37,6 @@ Component({
    */
   methods: {
 
-  },
-  lifetimes: {
-    attached:function() {
-      console.log('sdsadsad')
-      api.request({
-        methods:'GET',
-        success:res => {
-          console.log(res);
-          this.setData({
-            datas:res.data
-          })
-        }
-      }, this.data.customer.id+'/contact')
-    }
   }
+  
 })

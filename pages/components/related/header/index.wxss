@@ -1,22 +1,3 @@
-.body {
-  display: flex;
-  padding: 5rpx;
-}
-
-.item-container {
-  border-top: 15rpx solid #F5F6FA;
-}
-
-.description {
-  display: flex;
-  flex-direction: column;
-  flex:1;
-  margin-left: 20rpx;
-}
-.thumb {
-  width: 100rpx;
-  height: 100rpx;
-}
 .header {
   /* padding: 5rpx;
   border-bottom: 1rpx solid #E6E6E6;
@@ -29,18 +10,20 @@
   padding-left:0;
 }
 
-.item {
-  margin-bottom: 20rpx;
-}
-
 .product-icon {
   width: 35rpx;
   height: 35rpx;
   margin-right: 15rpx;
-  
 }
+
 .label-icon {
   font-size: 30rpx;
   color: #707070;
   font-weight: 600;
+}
+
+.icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: auto;
 }

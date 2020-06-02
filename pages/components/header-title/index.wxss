@@ -1,0 +1,29 @@
+.customer-name {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  border-bottom: 1rpx solid #E6E6E6;
+  margin-top: 20rpx;
+  height: 60rpx;
+  align-items: center;
+}
+
+.company {
+  font-size: 33rpx;
+  color:#333333 ;
+  font-weight: 700;
+}
+
+.created {
+  font-size: 25rpx;
+  color: #999999;
+  display: flex;
+}
+
+.folder {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+}

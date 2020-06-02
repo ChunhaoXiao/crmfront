@@ -1,0 +1,7 @@
+<view class="customer-name">
+  <view class="company">{{text}}</view>
+  <view class="created">
+    <image src="/icons/folder.png" class="folder"></image>
+    <text>{{created_from_now}}</text>
+  </view>
+</view>

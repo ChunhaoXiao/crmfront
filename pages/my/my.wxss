@@ -7,8 +7,10 @@ page {
   height: 100%;
 }
 .top {
-  background-color: aqua;
-  flex:3
+
+  flex:3;
+  height:490rpx;
+  
 }
 .nav {
   flex:1;

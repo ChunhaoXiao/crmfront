@@ -63,6 +63,8 @@
   "usingComponents": {
     "tab-item":"/pages/components/tab/index",
     "info-item":"/pages/components/info-item/index",
-    "area-item" : "/pages/components/textarea-item/index"
+    "area-item" : "/pages/components/textarea-item/index",
+    "related-header" : "/pages/components/related/header/index",
+    "header-title":"/pages/components/header-title/index"
   }
 }

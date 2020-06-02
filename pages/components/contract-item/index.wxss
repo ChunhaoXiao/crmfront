@@ -22,7 +22,8 @@
 }
 
 .value {
-  color: blue;
+  color:#4E7FF5;
+  font-weight: 600;
 }
 .label {
   color: grey;

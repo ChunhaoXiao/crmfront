@@ -1,0 +1,5 @@
+<view class="header">
+  <image src="{{icon}}" class="product-icon"></image>
+  <text class="label-icon">{{text}}</text>
+  <image class="icon" src="/icons/add-icon.png"></image>
+</view>

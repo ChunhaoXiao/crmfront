@@ -3,21 +3,25 @@
     <view class="company">{{contact.customer.name}}</view>
     <view class="created">
       <image src="/icons/folder.png" class="folder"></image>
-      <text>创建于3天前</text>
+      <text>创建于{{contact.created_from_now}}</text>
     </view>
   </view>
-  <view class="customer-info">
-    <view class="customer-level">
-      <text class="name">{{contact.name}}</text>
+
+  <view class="body">
+    <view class="body-item">
+      <text class="value">{{contact.name}}</text>
       <text class="label">联系人</text>
     </view>
-    <view class="customer-level">
-      <text class="name">{{contact.mobile}}</text>
+
+    <view class="body-item">
+      <text class="value">{{contact.mobile}}</text>
       <text class="label">联系方式</text>
     </view>
+
     <view class="phone" bindtap="makeCall">
       <image src="/icons/phone.png"></image>
     </view>
+
   </view>
 </view>
 

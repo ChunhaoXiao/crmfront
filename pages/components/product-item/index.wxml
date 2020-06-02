@@ -1,7 +1,7 @@
 <view class="product-container">
   <view class="thumb"><image class="image" src="{{product.cover}}"></image></view>
   <view class="content">
-      <text>{{product.name}}</text>
+      <text class="product-name">{{product.name}}</text>
       <view class="description">{{product.description}}</view>
   </view>
   <view class="btn" bindtap="selectProduct" wx:if="{{type == 'add'}}">

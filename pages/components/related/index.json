@@ -1,4 +1,13 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "product-item" :"../../components/product-item/index",
+    "call-item":"../../components/call-item",
+    "business-item" : "../../components/business-item/index",
+    "thread-item" : "../../components/thread-item/index",
+    "contract-item" : "../../components/contract-item/index",
+    "payment-item" : "../../components/payment-item/index"
+  
+
+  }
 }

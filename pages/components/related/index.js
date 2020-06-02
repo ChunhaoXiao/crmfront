@@ -8,7 +8,7 @@ Component({
         method:'GET',
         //data:{customer_id:this.data.customer.id},
         success:res => {
-          console.log(res)
+          console.log(res.data)
           this.setData({
             datas:res.data
           })

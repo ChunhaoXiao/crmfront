@@ -1,71 +1,41 @@
 <view>
   <view class="item"  wx:if="{{datas.products.name}}">
-    <view class="header">产品</view>
-    <view class="body">
-      <image src="{{datas.products.cover}}" class="thumb"></image>
-        <view class="description">
-          <text>{{datas.products.name}}</text>
-          <text>{{datas.products.description}}</text>
-        </view>
-        <view>查看</view>
-      </view>
+    <view class="item-container">
+      <related-header text="商品" icon="/icons/product-icon.png"/>
+      <product-item  product="{{datas.products}}" type="list"/>
+    </view>
   </view>
 
-  <view>
-    <view class="header">
-     <view>商机</view>
-     <view>{{datas.business.name}}</view>
+  <view class="item">
+    <view class="item-container">
+      <related-header text="商机" icon="/icons/business-icon.png"/>
+      <business-item business="{{datas.business}}"/>
     </view>
-    
-    <view class="body">
-      
-        <view class="description">
-          <text>{{datas.business.customer.name}}</text>
-          <text>客户名称</text>
-        </view>
-        <view class="description">
-          <text>{{datas.business.expected_deal_date}}</text>
-          <text>预计成交时间</text>
-        </view>
-        <view>查看</view>
-      </view>
-    </view>
+  </view>
 
+  <view class="item" wx:if="{{datas.thread}}">
+    <view class="item-container">
+      <related-header text="线索" icon="/icons/business-icon.png"/>
+      <thread-item thread="{{datas.business}}"/>
+    </view>
+  </view>
 
-    <view>
-    <view class="header">
-      <view> 合同 </view>
-      <view>{{datas.contract.name}}</view>
+  <view class="item" wx:if="{{datas.contract}}">
+    <view class="item-container">
+      <related-header text="合同" icon="/icons/business-icon.png"/>
+      <contract-item contract="{{datas.contract}}"/>
     </view>
-    <view class="body">
-        <view class="description">
-          <text>{{datas.contract.name}}</text>
-          <text>客户名称</text>
-        </view>
-        <view class="description">
-          <text>{{datas.contract.total_amount}}</text>
-          <text>合同金额</text>
-        </view>
-        <view>查看</view>
-      </view>
-    </view>
+  </view>
 
-  <view>
-    <view class="header">
-      <view> 回款 </view>
-      <view>{{datas.payment.pay_number}}</view>
+  <view class="item" wx:if="{{datas.payment}}">
+    <view class="item-container">
+      <related-header text="回款" icon="/icons/business-icon.png"/>
+      <payment-item payment="{{datas.payment}}"/>
     </view>
-    <view class="body">
-        <view class="description">
-          <text>{{datas.payment.customer.name}}</text>
-          <text>客户名称</text>
-        </view>
-        <view class="description">
-          <text>{{datas.contract.total_amount}}</text>
-          <text>合同金额</text>
-        </view>
-        <view>查看</view>
-      </view>
-    </view>
-
+  </view>
+  
+  <!-- <view class="header">
+    <image src="/icons/product-icon.png" class="product-icon"></image>
+    <text class="label-icon">商机</text>
+  </view> -->
 </view>

@@ -1,5 +1,5 @@
 <view class="body">
-  <view class="top">asdsad</view> 
+  <view class="top" style="background-image: url(../../icons/my-bg.png)">asdsad</view> 
   <view class="nav">
       <navigator url="{{item.url}}"  wx:for="{{mynavs}}" class="nav-item">
          {{item.text}}
