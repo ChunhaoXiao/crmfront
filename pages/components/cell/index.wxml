@@ -1,0 +1,7 @@
+<view class="container {{ border == 1?'bottom':'' }}">
+  <image wx:if="{{icon}}" src="{{icon}}" class="icon"></image>
+  <view class="title">{{title}}</view>
+  <view class="right">
+  <slot></slot>
+  </view>
+</view>

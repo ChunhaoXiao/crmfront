@@ -1,20 +1,18 @@
 <view>
+
   <view class="header">
-    <view>商机详情</view>
-    <view>{{business.name}}</view>
-    <view>{{business.level}}</view>
+    <view class="title">商机详情</view>
+    <view class="sub-title">{{business.name}}</view>
+    <view class="business-level">{{business.level}}</view>
   </view>
-  <view class="info-title">基本资料</view>
-  <view>
-    <text>客户名称：</text>
-    <text>{{business.customer}}</text>
+  <title-cell text="基本资料"/>
+  <view style="padding:10rpx">
+   <cell title="客户名称">{{business.customer}}</cell>
+   <cell title="预计成交时间">{{business.expected_deal_date}}</cell>
   </view>
-  <view>
-    <text>预计成交时间：</text>
-    <text>{{business.expected_deal_date}}</text>
-  </view>
-  <view class="info-title">产品信息</view>
-  <scroll-view>
-    <product wx:for="{{business.product}}" product="{{item}}" type="list"/>
-  </scroll-view>
+
+  <title-cell text="商品信息"/>
+  <view wx:if="{{business.product.length > 0}}">
+    <product-item wx:for="{{business.product}}" wx:key="index" product="{{item}}"/>
+  </view>  
 </view>

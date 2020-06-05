@@ -83,6 +83,13 @@
 					"id": -1,
 					"name": "pages/customerdetail/customerdetail",
 					"pathName": "pages/customerdetail/customerdetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myproduct/myproduct",
+					"pathName": "pages/myproduct/myproduct",
 					"scene": null
 				}
 			]

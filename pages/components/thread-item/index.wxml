@@ -1,21 +1,19 @@
 <navigator class="main" url="/pages/mythread/show?id={{thread.id}}">
-  <view class="header">
-    <text>{{thread.name}}</text>
-    <text>创建于{{thread.create_time}}</text>
-  </view>
+  <header-created title="{{thread.name}}" created_text="{{thread.create_time}}"/>
   <view class="body">
-  
-  <view class="body-item">
-    <text>{{thread.customer_name}}</text>
-    <text>客户名称</text>
-  </view>
 
-  <view class="body-item">
-    <text>{{thread.src}}</text>
-    <text>线索来源</text>
-  </view>
-  <view class="body-item">
-    {{thread.level}}
-  </view>
+    <view class="body-item">
+      <text class="title">{{thread.customer_name}}</text>
+      <text class="created-time">客户名称</text>
+    </view>
+
+    <view class="body-item">
+      <text class="title">{{thread.src}}</text>
+      <text class="created-time">线索来源</text>
+    </view>
+    
+    <view class="body-item">
+      <view class="button">{{thread.level}}</view>
+    </view>
   </view>
 </navigator>

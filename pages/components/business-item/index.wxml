@@ -1,18 +1,17 @@
 <navigator class="main" url="/pages/mybusiness/show?id={{business.id}}">
-  <view class="header">
-    <text class="customer-name">{{business.name}}</text>
-    <text class="created-time">创建于{{business.create_time}}</text>
-  </view>
-
+  <header-created title="{{business.name}}" created_text="{{business.create_time}}"/>
   <view class="body">
+
     <view class="body-item">
       <text class="title">{{business.customer}}</text>
       <text class="created-time">客户名称</text>
     </view>
+
     <view class="body-item">
       <text class="title">{{business.expected_deal_date}}</text>
       <text class="created-time">预计成交日期</text>
     </view>
+    
     <view class="body-item">
       <view class="button">{{business.level}}</view>
     </view>

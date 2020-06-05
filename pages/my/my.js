@@ -1,5 +1,7 @@
 // pages/my/my.js
 const mynav = require('../../datas/mynav');
+const api = require('../../utils/request');
+
 Page({
 
   /**
@@ -17,6 +19,14 @@ Page({
     this.setData({
       mynavs:mynav.mynav
     })
+    api.request({
+      success:res => {
+        console.log(res.data)
+        this.setData({
+          material:res.data
+        })
+      }
+    }, 'material');
   },
 
   /**

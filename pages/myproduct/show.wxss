@@ -11,8 +11,12 @@
   padding: 5rpx;
 }
 .info-title {
-  background-color: #E6E6E6;
-  padding: 5rpx;
+  background-color:#F5F6FA;
+  height: 70rpx;
+  line-height: 70rpx;
+  padding: 5rpx 15rpx;
+  color: #333333;
+  font-weight: 600;
 }
 .description-body {
   display: flex;
@@ -24,4 +28,19 @@
   display: flex;
   justify-content: center;
   margin-top: 3rpx;
+}
+
+.image-body image {
+  width: 100%;
+}
+
+.cell {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx 15rpx;
+}
+
+.product-main {
+  border:1rpx dashed #E6E6E6;
+  margin:1rpx;
 }

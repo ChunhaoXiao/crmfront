@@ -1,25 +1,25 @@
 <view>
-  <view class="header">
-    <view>产品信息</view>
-    <image src="{{product.cover}}" class="thumb"></image>
-    <view>{{product.name}}</view>
-  </view>
+  <detail-header product="{{product}}"/>
   
 
   <view class="info-title">产品信息</view>
-  <view>
+
+  <view class="cell">
     <text>产品售价：</text>
     <text>{{product.price}}</text>
   </view>
-  <view>
+
+  <view class="cell">
     <text>是否已上架：</text>
     <text>{{product.on_sale}}</text>
   </view>
-  <view class="description-body">
-    <text>商品描述：</text>
-    <text>dfds</text>
+  <view class="product-main">
+    <view class="cell">
+      <text>产品介绍</text>
+    </view>
+    <view class="image-body" wx:for="{{product.picturelist}}" wx:key="index">
+      <image src="{{item}}" bindtap="showImage" data-current="{{item}}"></image>
+    </view>
   </view>
-  <view class="image-body" wx:for="{{product.picturelist}}" wx:key="index">
-    <image src="{{item}}"></image>
-  </view>
+  
 </view>

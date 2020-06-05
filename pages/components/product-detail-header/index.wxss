@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-weight: 30rpx;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 15rpx;
+}
+.cover {
+  width: 100rpx;
+  height: 100rpx;
+  border:1rpx dashed #E6E6E6;
+  padding: 2rpx;
+}
+
+.info {
+  font-size: 26rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  font-weight: 600;
+  color: #333333;
+}

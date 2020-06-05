@@ -1,29 +1,23 @@
-<view>
+<view class="body">
   <view class="header">
-    <view>线索详情</view>
-    <view>{{thread.name}}</view>
-    <view></view>
+    <view class="title">线索详情</view>
+    <view class="sub-title">{{thread.name}}</view>
+    <view class="business-level">{{thread.level}}</view>
   </view>
-  <view class="info-title">基本资料</view>
-  <view>
-    <text>线索来源：</text>
-    <text>{{thread.src}}</text>
+  <title-cell text="基本资料"/>
+
+  <view style="padding-bottom:15rpx">
+   <cell title="线索来源" border="0">{{thread.src}}</cell>
   </view>
-  <view>
-    <text>潜在客户名称：</text>
-    <text>{{thread.customer_name}}</text>
+  <cell title="潜在客户名称">{{thread.customer_name}}</cell>
+  <cell title="客户行业">{{thread.industry}}</cell>
+  <cell title="地址">{{thread.address}}</cell>
+  <view style="padding-bottom:20rpx">
+    <cell title="下次联系时间" border="0">{{thread.call_date}}</cell>
   </view>
-  <view>
-    <text>客户行业：</text>
-    <text>{{thread.industry}}</text>
-  </view>
-  <view>
-    <text>地址：</text>
-    <text>{{thread.address}}</text>
-  </view>
-  <view>
-    <text>下次联系时间：</text>
-    <text>{{thread.call_date}}</text>
-  </view>
-  
+  <cell title="线索来源">{{thread.src}}</cell>
+
+  <view wx:if="{{business.product.length > 0}}">
+    <product-item wx:for="{{business.product}}" wx:key="index" product="{{item}}"/>
+  </view>  
 </view>

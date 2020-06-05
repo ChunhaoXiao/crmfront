@@ -1,0 +1,4 @@
+<navigator class="container" url="{{nav.url}}">
+  <image src="{{nav.icon}}"></image>
+  <view class="nav-text">{{nav.text}}</view>
+</navigator>

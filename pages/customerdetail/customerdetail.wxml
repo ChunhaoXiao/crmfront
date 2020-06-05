@@ -5,7 +5,6 @@
   <view class="nav">
    <view class="{{type == item.name ? 'nav-active-item':''}}" wx:for="{{nav}}" bindtap="switchtab" data-name="{{item.name}}" wx:key="index">{{item.text}}</view>
   </view>
-  
   <view class="main-content" wx:if="{{type == 'info'}}">
    <customer-profile customer="{{customer}}"/>
   </view>
@@ -13,40 +12,7 @@
 
 <view wx:if="{{type == 'call'}}">
   <call-list customer="{{customer}}"/>
-  <!-- <call-list  customer="{{customer}}" wx:if="{{!showform}}"/>
-  <button bindtap="addCall" wx:if="{{!showform}}">添加</button>
-   <form wx:if="{{showform}}">
-    <picker bindchange="selectCall" value="{{index}}" range="{{calls}}" range-key="name">
-      <view class="picker">
-        跟进方式：{{calls[call_index].name}}
-      </view>
-    </picker>
-     <area-item text="跟进内容" name="content" bindgetInput="getValue" defaultvalue="{{postData.content}}"/>
-    <button type="primary" bindtap="createCall">确定</button>
-  </form> -->
 </view>
-
-
-
-
-<!-- <view class="main-content" wx:if="{{type == 'call'}}">
-  <scroll-view wx:if="{{!showform}}">
-     <call-item />
-     <call-item />
-  </scroll-view>
-  <button bindtap="addCall">添加</button>
-  <form wx:if="{{showform}}">
-   
-    <picker bindchange="selectCall" value="{{index}}" range="{{calls}}" range-key="name">
-      <view class="picker">
-        跟进方式：{{calls[call_index].name}}
-      </view>
-    </picker>
-     <area-item text="跟进内容" name="content" bindgetInput="getValue" defaultvalue="{{postData.content}}"/>
-    <button type="primary" bindtap="createCall">确定</button>
-  </form>
-</view> -->
-
 <view class="main-content" wx:if="{{type == 'related'}}">
   <related customer="{{customer}}"/>
 </view>

@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="title">产品信息</view>
+  <image src="{{product.cover}}" class="cover"></image>
+  <view class="info">{{product.name}}</view>
+  <view></view>
+</view>

@@ -3,6 +3,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 30rpx;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 32rpx;
+  height: 45rpx;
+  line-height: 45rpx;
+  font-family:PingFang SC ;
 }
 
 .header .thumb {
@@ -24,4 +33,24 @@
   display: flex;
   justify-content: center;
   margin-top: 3rpx;
+}
+.sub-title {
+  font-size:28rpx;
+  color: #4E7FF5;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-weight: 600;
+  margin-top: 30rpx;
+}
+
+.business-level {
+  width: 150rpx;
+  height: 56rpx;
+  border-radius: 28rpx;
+  background-color: #FFBE58;
+  color: #fff;
+  text-align: center;
+  line-height: 56rpx;
+  font-size: 20rpx;
+  margin-top: 20rpx;
 }

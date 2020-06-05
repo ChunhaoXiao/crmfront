@@ -65,6 +65,10 @@
     "info-item":"/pages/components/info-item/index",
     "area-item" : "/pages/components/textarea-item/index",
     "related-header" : "/pages/components/related/header/index",
-    "header-title":"/pages/components/header-title/index"
+    "header-title":"/pages/components/header-title/index",
+    "cell" : "/pages/components/cell/index",
+    "header-created" : "/pages/components/header-created/index",
+    "title-cell" : "/pages/components/title-cell/index",
+    "product-item" : "/pages/components/product-item/index"
   }
 }

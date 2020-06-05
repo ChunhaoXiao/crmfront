@@ -70,5 +70,12 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  showImage(e) {
+    const current = e.currentTarget.dataset.current;
+   wx.previewImage({
+     current:current,
+     urls: this.data.product.picturelist,
+   })
   }
 })

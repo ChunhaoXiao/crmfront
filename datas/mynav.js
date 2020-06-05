@@ -2,21 +2,26 @@ module.exports.mynav = [
   {
     text:"产品",
     url:"/pages/myproduct/myproduct",
+    icon:"/icons/product-icon.png",
   },
   {
     text:"商机",
     url:"/pages/mybusiness/mybusiness",
+    icon:"/icons/business-icon.png",
   },
   {
     text:"线索",
     url:"/pages/mythread/mythread",
+    icon:"/icons/thread-icon.png",
   },
   {
     text:"回款",
     url:"/pages/mypayment/mypayment",
+    icon:"/icons/payment-icon.png",
   },
   {
     text:"合同",
     url:"/pages/mycontract/mycontract",
+    icon:"/icons/contract-icon.png",
   }
 ];
