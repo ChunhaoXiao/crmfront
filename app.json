@@ -69,6 +69,7 @@
     "cell" : "/pages/components/cell/index",
     "header-created" : "/pages/components/header-created/index",
     "title-cell" : "/pages/components/title-cell/index",
-    "product-item" : "/pages/components/product-item/index"
+    "product-item" : "/pages/components/product-item/index",
+    "bar" : "/pages/components/bar/index"
   }
 }

@@ -1,24 +1,21 @@
 
 <navigator class="main" url="/pages/mypayment/show?id={{payment.id}}">
-  <!-- <view class="header">
-    <text>回款编号：{{payment.pay_number}}</text>
-    <text>创建于{{payment.created_time}}</text>
-  </view> -->
-  <header-title text="{{payment.pay_number}}" created_from_now="创建于{{payment.created_time}}"/>
+  <header-created title="{{payment.pay_number}}" created_text=""/>
   <view class="body">
-  
-  <view class="body-item">
-    <text class="value">{{payment.customer}}</text>
-    <text class="label">客户名称</text>
-  </view>
 
-  <view class="body-item">
-    <text class="value">{{payment.pay_amount}}</text>
-    <text class="label">回款金额</text>
-  </view>
-  <view class="body-item">
-    <text class="value">{{payment.paymethod}}</text>
-    <text class="label">回款方式</text>
-  </view>
+    <view class="body-item">
+      <text class="title">{{payment.customer}}</text>
+      <text class="created-time">客户名称</text>
+    </view>
+
+    <view class="body-item">
+      <text class="title">{{payment.pay_amount}}</text>
+      <text class="created-time">回款金额</text>
+    </view>
+    
+    <view class="body-item">
+      <text class="title">{{payment.paymethod}}</text>
+      <text class="created-time">回款方式</text>
+    </view>
   </view>
 </navigator>

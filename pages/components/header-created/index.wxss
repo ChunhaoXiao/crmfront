@@ -3,12 +3,15 @@
   color: #999999;
   display: flex;
   width: 180rpx;
-  justify-content: space-between;
+  justify-content: flex-end;
+
+  flex:1;
 }
 
 .created image {
   width: 30rpx;
   height: 30rpx;
+  
 }
 
 .body {

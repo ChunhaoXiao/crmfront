@@ -1,36 +1,24 @@
 <view>
   <view class="header">
-    <view>回款详情</view>
-    <view>{{payment.pay_number}}</view>
+    <view class="title">回款详细详情</view>
+    <!-- <view>{{payment.pay_number}}</view> -->
     <view></view>
   </view>
-  <view class="info-title">基本资料</view>
+    <!-- <title-cell text="基本信息"/> -->
   <view>
-    <text>回款编号：</text>
-    <text>{{payment.pay_number}}</text>
-  </view>
-  <view>
-    <text>合同：</text>
-    <text>{{payment.contract.name}}</text>
-  </view>
-  <view>
-    <text>客户：</text>
-    <text>{{payment.customer.name}}</text>
-  </view>
-  <view>
-    <text>回款日期：</text>
-    <text>{{payment.pay_date}}</text>
-  </view>
-  <view>
-    <text>回款金额：</text>
-    <text>{{payment.pay_amount}}</text>
-  </view>
-  <view>
-    <text>回款方式：</text>
-    <text>{{payment.paymethod.name}}</text>
-  </view>
-   <view>
-    <text>备注：</text>
-    <text>{{payment.note}}</text>
+    <bar />
+    <cell title="回款编号">{{payment.pay_number}}</cell>
+    <cell title="所属合同" border="0">{{payment.contract.name}}</cell>
+
+   <bar/>
+    <cell title="所属客户" border="0">{{payment.customer}}</cell>
+    <bar/>
+    <cell title="期数"></cell>
+    <cell title="回款日期">{{payment.pay_date}}</cell>
+    <cell title="回款金额">{{payment.pay_amount}}</cell>
+    <cell title="回款方式">{{payment.paymethod}}</cell>
+    <cell title="备注" border="0"/>
+
+    <view>{{payment.note}}</view>
   </view>
 </view>

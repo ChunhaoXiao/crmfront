@@ -1,8 +1,6 @@
 <navigator class="container" url="/pages/mycontract/show?id={{contract.id}}">
-  <view class="header">
-    <text>{{contract.name}}</text>
-    <text>{{contract.start_date}}~{{contract.end_date}}</text>
-  </view>
+   <header-created title="{{contract.name}}" created_text="{{contract.start_date+'~'+contract.end_date}}"/>
+  
   <view class="body">
     <view class="body-item">
       <text class="value">{{contract.customer.name}}</text>
@@ -18,3 +16,4 @@
     </view>
   </view>
 </navigator>
+

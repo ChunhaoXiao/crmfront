@@ -6,7 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    postData:{
+      
+    }
   },
 
   /**
@@ -61,7 +63,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    
   },
 
   /**
@@ -81,7 +83,7 @@ Page({
   },
 
   sendData() {
-    //console.log(this.data.postData);
+    console.log(this.data.postData);
     api.request({
       method:'POST',
       data:this.data.postData,

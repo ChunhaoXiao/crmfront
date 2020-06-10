@@ -13,9 +13,11 @@
 <view wx:if="{{type == 'call'}}">
   <call-list customer="{{customer}}"/>
 </view>
+
 <view class="main-content" wx:if="{{type == 'related'}}">
   <related customer="{{customer}}"/>
 </view>
+
 <view class="main-content" wx:if="{{type == 'contact'}}">
  <contact customer="{{customer}}"/>
 </view>

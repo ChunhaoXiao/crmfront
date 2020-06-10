@@ -1,9 +1,10 @@
 .container {
-  padding: 10rpx;
+  /* padding: 10rpx; */
 }
 .header {
   display: flex;
   justify-content: center;
+  padding-bottom: 20rpx;
 }
 .item-body {
   display: flex;
@@ -18,6 +19,7 @@
 
 .archive {
   display: flex;
+  padding: 10rpx;
 }
 
 .archive image {

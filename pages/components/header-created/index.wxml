@@ -2,7 +2,7 @@
     <text class="name">{{title}}</text>
     <view class="created">
       <image src="/icons/folder.png"></image>
-      <text>创建于{{created_text}}</text>
+      <text>{{created_text}}</text>
     </view>
   </view>
 

@@ -5,6 +5,13 @@
   align-items: center;
 }
 
+.title {
+  size: 32rpx;
+  color: #333333;
+  font-weight: 600;
+  padding-bottom: 10rpx;
+}
+
 .header .thumb {
   width: 100rpx;
   height: 100rpx;
