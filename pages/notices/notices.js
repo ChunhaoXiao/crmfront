@@ -1,32 +1,19 @@
-// pages/my/my.js
-const mynav = require('../../datas/mynav');
+// pages/notices/notices.js
 const api = require('../../utils/request');
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    lists:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(mynav.mynav);
-    this.setData({
-      mynavs:mynav.mynav
-    })
-    api.request({
-      success:res => {
-        console.log(res.data)
-        this.setData({
-          material:res.data
-        })
-      }
-    }, 'material');
+    this.getNoticeList();
   },
 
   /**
@@ -77,22 +64,14 @@ Page({
   onShareAppMessage: function () {
 
   },
-  showAbout() {
+  getNoticeList() {
     api.request({
       success:res => {
-        console.log(res)
+        
         this.setData({
-          content:res.data.content
+          lists:res.data.data
         })
       }
-    }, 'about')
-    this.setData({
-      about:true
-    })
-  },
-  hideDialog() {
-    this.setData({
-      about:false
-    })
+    }, 'notices')
   }
 })

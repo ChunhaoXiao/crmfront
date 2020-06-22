@@ -1,0 +1,6 @@
+
+<view>
+  <link-cell icon="/icons/daiban.png"  title="代办" url="/pages/pendingagenda/pendingagenda"></link-cell>
+  <link-cell icon="/icons/tongzhi.png" title="通知" url="/pages/notices/notices"></link-cell>
+  <link-cell icon="/icons/gonggao.png" title="公告"></link-cell>
+</view>

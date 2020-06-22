@@ -1,0 +1,9 @@
+
+<navigator class="container {{ border == 1?'bottom':'' }}" url="{{url}}">
+  <image wx:if="{{icon}}" src="{{icon}}" class="icon"></image>
+  <view class="title">{{title}}</view>
+  <view class="right">
+    <image src="/icons/right-arrow.png" class="arrow"></image>
+      <slot></slot>
+  </view>
+</navigator>

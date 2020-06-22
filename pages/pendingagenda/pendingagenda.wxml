@@ -1,0 +1,15 @@
+<mp-cells ext-class="my-cells" title="代办">
+    <mp-cell   wx:for="{{datas}}" bindtap="showDetail" data-id="{{item.id}}">
+         <view>{{item.type.name}}</view>
+        <view slot="footer">{{item.agent_start}}</view>
+    </mp-cell>
+</mp-cells>
+
+<mp-dialog title="{{data.theme}}" show="{{showinfo}}" bindbuttontap="hideinfo" buttons="{{oneButton}}">
+    <view class="agenda-content">
+      <view class="agenda-item"><text class="label">内容</text><text class="value">{{data.description}}</text></view>
+      <view class="agenda-item"><text class="label">时间</text><text class="value">{{ data.agent_start }}</text> </view>
+      <view class="agenda-item"><text class="label">地点</text><text class="value">{{ data.position }}</text> </view>
+    </view>
+    
+</mp-dialog>

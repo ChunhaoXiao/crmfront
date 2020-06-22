@@ -1,6 +1,9 @@
 // pages/customer/customer.js
 const app = getApp();
 const api = require('../../utils/request')
+const mixin = require('../../utils/mixin');
+Object.assign(Page.prototype, mixin.methods);
+
 Page({
 
   /**
@@ -78,14 +81,15 @@ Page({
     })
   },
 
-  getValue(e) {
-    let exists = this.data.postData;
-    let datas = {...exists, ...e.detail}
-    console.log(datas);
-    this.setData({
-      postData:datas
-    });
-  },
+  // getValue(e) {
+  //   let exists = this.data.postData;
+  //   let datas = {...exists, ...e.detail}
+  //   console.log(datas);
+  //   this.setData({
+  //     postData:datas
+  //   });
+  // },
+
   sendData(){
     api.request({
       method:'POST',

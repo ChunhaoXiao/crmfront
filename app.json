@@ -24,8 +24,11 @@
     "pages/mypayment/mypayment",
     "pages/mypayment/show",
     "pages/mycontract/mycontract",
-    "pages/mycontract/show"
-   
+    "pages/mycontract/show",
+    "pages/message/message",
+    "pages/feedback/feedback",
+    "pages/pendingagenda/pendingagenda",
+    "pages/notices/notices"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -50,7 +53,7 @@
         "text": "+"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/message/message",
         "text": "消息"
       },
       {
@@ -70,6 +73,21 @@
     "header-created" : "/pages/components/header-created/index",
     "title-cell" : "/pages/components/title-cell/index",
     "product-item" : "/pages/components/product-item/index",
-    "bar" : "/pages/components/bar/index"
+    "bar" : "/pages/components/bar/index",
+    "link-cell" : "/pages/components/link-cell/index",
+
+    "mp-dialog": "/miniprogram_npm/weui-miniprogram/dialog/dialog",
+    "mp-uploader": "/miniprogram_npm/weui-miniprogram/uploader/uploader",
+    "mp-cells": "/miniprogram_npm/weui-miniprogram/cells/cells",
+    "mp-cell": "/miniprogram_npm/weui-miniprogram/cell/cell",
+    "upload-img" :"/pages/components/chooseimg/index",
+    "mp-slideview": "/miniprogram_npm/weui-miniprogram/slideview/slideview",
+    "message-item" : "/pages/components/message-item/index"
+  },
+
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
   }
+  
 }

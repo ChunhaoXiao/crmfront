@@ -1,32 +1,20 @@
-// pages/my/my.js
-const mynav = require('../../datas/mynav');
+// pages/feedback/feedback.js
 const api = require('../../utils/request');
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    pictures:[],
+    content:'',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(mynav.mynav);
-    this.setData({
-      mynavs:mynav.mynav
-    })
-    api.request({
-      success:res => {
-        console.log(res.data)
-        this.setData({
-          material:res.data
-        })
-      }
-    }, 'material');
+
   },
 
   /**
@@ -77,22 +65,38 @@ Page({
   onShareAppMessage: function () {
 
   },
-  showAbout() {
-    api.request({
-      success:res => {
-        console.log(res)
-        this.setData({
-          content:res.data.content
-        })
-      }
-    }, 'about')
+
+  getUploadedPicture(e) {
+    let pictures = this.data.pictures;
+    pictures.push(e.detail);
     this.setData({
-      about:true
+      pictures:pictures
+    })
+    console.log(this.data.pictures)
+  },
+  getContent(e) {
+    //console.log(e.detail.value)
+    this.setData({
+      content:e.detail.value
     })
   },
-  hideDialog() {
-    this.setData({
-      about:false
-    })
+  sendFeedback() {
+    api.request({
+      method:'POST',
+      data:{
+        content:this.data.content,
+        pictures:this.data.pictures
+      },
+      success:res => {
+        wx.showToast({
+          title: '提交成功',
+        })
+        setTimeout(function(){
+          wx.switchTab({
+            url: '/pages/my/my',
+          })
+        },1000);
+      }
+    }, 'feedback')
   }
 })

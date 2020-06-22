@@ -1,32 +1,23 @@
-// pages/my/my.js
-const mynav = require('../../datas/mynav');
+// pages/messagelist/messagelist.js
 const api = require('../../utils/request');
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    datas:[],
+    showinfo:false,
+    oneButton:[{
+      text:'确定'
+    }]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(mynav.mynav);
-    this.setData({
-      mynavs:mynav.mynav
-    })
-    api.request({
-      success:res => {
-        console.log(res.data)
-        this.setData({
-          material:res.data
-        })
-      }
-    }, 'material');
+    this.getMessageList();
   },
 
   /**
@@ -77,22 +68,33 @@ Page({
   onShareAppMessage: function () {
 
   },
-  showAbout() {
+  getMessageList() {
+    api.request({
+      success:res => {
+        console.log(res);
+        this.setData({
+          datas:res.data
+        })
+      }
+    }, 'pending')
+  },
+  showDetail(e) {
+    console.log(e)
+    const id = e.currentTarget.dataset.id;
     api.request({
       success:res => {
         console.log(res)
         this.setData({
-          content:res.data.content
+          showinfo:true,
+          data:res.data.data
         })
       }
-    }, 'about')
-    this.setData({
-      about:true
-    })
+    }, 'pending/'+id);
+   
   },
-  hideDialog() {
+  hideinfo() {
     this.setData({
-      about:false
+      showinfo:false
     })
   }
 })

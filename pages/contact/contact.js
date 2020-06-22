@@ -2,6 +2,8 @@
 const app = getApp();
 const api = require('../../utils/request')
 const util = require('../../utils/util')
+const mixin = require('../../utils/mixin');
+Object.assign(Page.prototype, mixin.getValue);
 Page({
 
   /**
@@ -89,14 +91,14 @@ Page({
     })
   },
 
-  getValue(e) {
-    let exists = this.data.postData;
-    let datas = {...exists, ...e.detail}
-    console.log(datas);
-    this.setData({
-      postData:datas
-    });
-  },
+  // getValue(e) {
+  //   let exists = this.data.postData;
+  //   let datas = {...exists, ...e.detail}
+  //   console.log(datas);
+  //   this.setData({
+  //     postData:datas
+  //   });
+  // },
   getDate(e) {
     console.log(e.detail)
     this.setData({

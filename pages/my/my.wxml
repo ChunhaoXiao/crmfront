@@ -27,7 +27,14 @@
     <cell title="消息推送" icon="/icons/alert.png">
        <switch checked="true" bindchange="switch1Change"/>
     </cell>
-    <cell title="关于我们" icon="/icons/about.png"></cell>
-    <cell title="帮助反馈" icon="/icons/help.png"></cell>
+    <cell title="关于我们" icon="/icons/about.png" bindtap="showAbout"></cell>
+    <navigator url="/pages/feedback/feedback">
+        <cell title="帮助反馈" icon="/icons/help.png"></cell>
+    </navigator>
+    
+
+    <mp-dialog title="关于我们" show="{{about}}" bindbuttontap="hideDialog" buttons="{{[{text: '确认'}]}}">
+      <view>{{content}}</view>
+    </mp-dialog>
   </view>
 </view>

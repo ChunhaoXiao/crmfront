@@ -1,7 +1,4 @@
-// pages/my/my.js
-const mynav = require('../../datas/mynav');
-const api = require('../../utils/request');
-
+// pages/message/message.js
 Page({
 
   /**
@@ -15,18 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(mynav.mynav);
-    this.setData({
-      mynavs:mynav.mynav
-    })
-    api.request({
-      success:res => {
-        console.log(res.data)
-        this.setData({
-          material:res.data
-        })
-      }
-    }, 'material');
+      
   },
 
   /**
@@ -76,23 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  showAbout() {
-    api.request({
-      success:res => {
-        console.log(res)
-        this.setData({
-          content:res.data.content
-        })
-      }
-    }, 'about')
-    this.setData({
-      about:true
-    })
-  },
-  hideDialog() {
-    this.setData({
-      about:false
-    })
   }
 })

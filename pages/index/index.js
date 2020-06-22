@@ -61,6 +61,14 @@ Page({
     const fullyear = year+'-'+month+'-'+day;
     this.getAgenda(fullyear);
   },
+  whenChangeMonth(e) {
+    console.log('whenChangeMonth', e.detail.next);
+    const day = new Date().getDate();
+    const year = e.detail.next.year;
+    const month = e.detail.next.month;
+    const date = year+'-'+month+'-'+day;
+    this.getAgenda(date);
+  },
 
   getAgenda(dt='') {
     api.request({

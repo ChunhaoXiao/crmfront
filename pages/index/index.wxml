@@ -7,7 +7,7 @@
 <view wx:if="{{currentTab == 'agenda'}}">
 <view class="title">你好，{{datas.user}}</view>
   <view>
-    <calendar bind:onTapDay="onTapDay" bind:afterTapDay="afterTapDay"/>
+    <calendar bind:onTapDay="onTapDay" bind:afterTapDay="afterTapDay" bind:onSwipe="onSwipe" bind:whenChangeMonth="whenChangeMonth"/>
   </view>
   
   <view>

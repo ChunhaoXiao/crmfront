@@ -1,0 +1,22 @@
+ <view class="page">
+ <view class="weui-cells__title">问题描述</view>
+  <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+          <view class="weui-cell__bd">
+              <textarea class="weui-textarea" placeholder="请输入问题描述" style="height: 5.3em" bindinput="getContent" />
+              <view class="weui-textarea-counter">0/200</view>
+          </view>
+      </view>
+  </view>
+  <mp-cell>
+      <view class="label">上传截图</view>
+      <upload-img bindsetpicture="getUploadedPicture"/>
+  </mp-cell>
+
+   <view slot="handle">
+        <button class="weui-btn" type="primary" style="display:block; width:100%" bindtap="sendFeedback">提交</button>
+    </view>
+</view>    
+
+
+  

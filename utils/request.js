@@ -15,6 +15,15 @@ const wxRequest = function (params, url) {
     data: params.data || {},
     header:header,
     success: function (res) {
+      console.log(res.statusCode);
+      if(res.statusCode == 429) {
+        wx.showToast({
+          title: '请求太频繁，稍后再试',
+          icon:"none"
+        })
+        return;
+      }
+
       if(res.statusCode == 500) {
         wx.showToast({
           title: '服务器错误',
@@ -23,6 +32,7 @@ const wxRequest = function (params, url) {
         return
       }
       if(res.statusCode == 422) {
+        
         const error = Object.values(res.data.errors)[0][0];
         wx.showToast({
           title: error,
