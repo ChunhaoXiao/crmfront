@@ -1,0 +1,17 @@
+<view>
+  <mp-cells ext-class="my-cells" bindtap="showmodal">
+      <mp-cell>
+          <view>{{title}}</view>
+          <view slot="footer">
+            <slot name="cell-content"></slot>
+          </view>
+      </mp-cell>
+  </mp-cells>
+  
+  <mp-dialog title="{{data.theme}}" show="{{show}}" bindbuttontap="hideinfo" buttons="{{oneButton}}">
+      <view class="agenda-content">
+        <slot name="modal-content">  </slot>
+      </view>
+  </mp-dialog>
+</view>
+

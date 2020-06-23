@@ -29,6 +29,7 @@
     "pages/feedback/feedback",
     "pages/pendingagenda/pendingagenda",
     "pages/notices/notices"
+    
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -82,7 +83,8 @@
     "mp-cell": "/miniprogram_npm/weui-miniprogram/cell/cell",
     "upload-img" :"/pages/components/chooseimg/index",
     "mp-slideview": "/miniprogram_npm/weui-miniprogram/slideview/slideview",
-    "message-item" : "/pages/components/message-item/index"
+    "message-item" : "/pages/components/message-item/index",
+    "message-detail" : "/pages/components/message-display/index"
   },
 
   "useExtendedLib": {

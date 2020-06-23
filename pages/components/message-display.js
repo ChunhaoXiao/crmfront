@@ -1,27 +1,25 @@
-// pages/notices/notices.js
-const api = require('../../utils/request');
+// pages/components/message-display.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    lists:[],
-    showinfo:false,
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getNoticeList();
+
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+
   },
 
   /**
@@ -64,27 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  getNoticeList() {
-    api.request({
-      success:res => {
-        this.setData({
-          lists:res.data.data
-        })
-      }
-    }, 'notices')
-  },
-  
-  getDetail(e) {
-    const id = e.currentTarget.dataset.id;
-    api.request({
-      success:res => {
-        console.log(res)
-        
-        this.setData({
-          detail:res.data
-        })
-      }
-    }, 'notices/'+id);
   }
 })
