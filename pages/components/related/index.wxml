@@ -6,7 +6,7 @@
     </view>
   </view>
 
-  <view class="item">
+  <view class="item" wx:if="{{datas.business}}">
     <view class="item-container">
       <related-header text="商机" icon="/icons/business-icon.png"/>
       <business-item business="{{datas.business}}"/>

@@ -1,8 +1,11 @@
 <view>通知</view>
-<message-detail wx:for="{{lists}}" data="{{item}}" url="notices" bindtap="getDetail" data-id="{{item.id}}"> 
-  <view slot="modal-content">
+<message-detail wx:for="{{lists}}" data="{{item}}" url="notices" bindtap="getDetail" data-id="{{item.id}}" title="{{item.title}}"> 
+  <view slot="cell-content">
+    {{item.created_from_now}}
+  </view>
+  <view slot="modal-content" class="slot-content">
     <view>{{detail.content}}</view>
-    <view>{{detail.created_at}}</view>
+    <view class="created">{{detail.created_from_now}}</view>
   </view>
 </message-detail>
 

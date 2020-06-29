@@ -1,4 +1,5 @@
-const host = 'http://test.test.cn'
+//const host = 'http://test.test.cn'
+const app = getApp();
 const wxRequest = function (params, url) {
   // wx.showToast({
   //   title: '加载中...',
@@ -9,8 +10,9 @@ const wxRequest = function (params, url) {
     header.Accept = 'application/json'
   }
   header.Authorization = 'Bearer '+wx.getStorageSync('token');
+  
   wx.request({
-    url: 'http://crm.test/api/'+url,
+    url: app.globalData.apiUrl+url,
     method: params.method || 'GET',
     data: params.data || {},
     header:header,

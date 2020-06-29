@@ -9,12 +9,13 @@ App({
     // 登录
     wx.login({
       success: res => {
+        
         wx.request({
           url: this.globalData.apiUrl+'authuser',
           method:'POST',
           data:{code:res.code},
           success:res => {
-            
+            console.log('loginres', res)
             console.log('token is',res.data);
             wx.setStorageSync('token', res.data.token)
           }
@@ -47,7 +48,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    apiUrl:"http://crm.test/api/"
+    apiUrl:"http://crm.zhaoxunta.com/api/"
   },
   async request(url, method, data, func) {
   let  headers = method == 'POST' ? { "Accept":"application/json"} : {};

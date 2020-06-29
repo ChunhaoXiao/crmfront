@@ -86,11 +86,14 @@ Page({
   },
 
   sendData() {
-    console.log(this.data.postData)
+    //console.log(this.data.postData)
+    console.log('aaaaa')
+    console.log(api)
     api.request({
       method:'POST',
       data:this.data.postData,
       success: res => {
+        console.log(res)
         wx.showToast({
           title: '操作成功',
         })

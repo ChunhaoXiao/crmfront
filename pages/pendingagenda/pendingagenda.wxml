@@ -1,4 +1,4 @@
-<mp-cells ext-class="my-cells" title="代办">
+<!-- <mp-cells ext-class="my-cells" title="代办">
     <mp-cell   wx:for="{{datas}}" bindtap="showDetail" data-id="{{item.id}}">
          <view>{{item.type.name}}</view>
         <view slot="footer">{{item.agent_start}}</view>
@@ -12,4 +12,18 @@
       <view class="agenda-item"><text class="label">地点</text><text class="value">{{ data.position }}</text> </view>
     </view>
     
-</mp-dialog>
+</mp-dialog> -->
+
+<view>代办</view>
+<message-detail wx:for="{{datas}}" data="{{item}}" url="notices" bindtap="showDetail" data-id="{{item.id}}" title="{{item.type.name}}"> 
+  <view slot="cell-content">
+    {{item.created_from_now}}
+  </view>
+  <view slot="modal-content" class="slot-content">
+    <!-- <view>{{detail.theme}}</view> -->
+    <view> {{detail.agenda_start}} - {{detail.agenda_end}} </view>
+    <view>{{detail.position}}</view>
+    <view>{{detail.description}}</view>
+    <!-- <view class="created">{{detail.created_from_now}}</view> -->
+  </view>
+</message-detail>

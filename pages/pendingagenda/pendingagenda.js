@@ -83,10 +83,10 @@ Page({
     const id = e.currentTarget.dataset.id;
     api.request({
       success:res => {
-        console.log(res)
+        console.log(res.data.data)
         this.setData({
           showinfo:true,
-          data:res.data.data
+          detail:res.data.data
         })
       }
     }, 'pending/'+id);

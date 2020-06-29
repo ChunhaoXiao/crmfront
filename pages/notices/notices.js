@@ -68,6 +68,7 @@ Page({
   getNoticeList() {
     api.request({
       success:res => {
+        console.log(res)
         this.setData({
           lists:res.data.data
         })

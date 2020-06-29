@@ -81,14 +81,14 @@ Page({
     })
   },
 
-  // getValue(e) {
-  //   let exists = this.data.postData;
-  //   let datas = {...exists, ...e.detail}
-  //   console.log(datas);
-  //   this.setData({
-  //     postData:datas
-  //   });
-  // },
+  getValue(e) {
+    let exists = this.data.postData;
+    let datas = {...exists, ...e.detail}
+    console.log(datas);
+    this.setData({
+      postData:datas
+    });
+  },
 
   sendData(){
     api.request({

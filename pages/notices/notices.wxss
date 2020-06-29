@@ -1,1 +1,9 @@
-/* pages/notices/notices.wxss */
+.slot-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.created {
+  font-size: 20rpx;
+  padding-top: 20rpx;
+}
